@@ -1,0 +1,29 @@
+.container {
+  width: 100%;
+  margin: auto;
+  padding: 8px;
+}
+
+@media (min-width: $grid-sm-breakpoint) and (max-width: $grid-md-breakpoint - 1px){
+  // @include col-list(12, 3);
+  // @include col-list(8, 4);
+  .container {
+    max-width: $grid-sm-breakpoint * 15 / 16;
+  }
+}
+
+@media (min-width: $grid-md-breakpoint) and (max-width: $grid-lg-breakpoint - 1px){
+  // @include col-list(12, 12);
+  // @include col-list(8, 8);
+  .container {
+    max-width: $grid-md-breakpoint * 15 / 16;
+  }
+}
+
+@media (min-width: $grid-lg-breakpoint){
+  // @include col-list(12, 24);
+  // @include col-list(8, 8);
+  .container {
+    max-width: $grid-lg-breakpoint * 15 / 16;
+  }
+}
