@@ -7,3 +7,14 @@ $grid-vertical-padding: 8px !default;
 
 // Typography //
 $typography-base-size: 14px !default;
+
+// Colour //
+
+/* RGB */
+$color-primary-light  : rgba(220, 237, 255, 1);
+$color-primary-dark   : rgba(45, 49, 66, 1);
+$color-accent         : rgba(168, 109, 118, 1);
+$color-secondary-light: rgba(42, 42, 42, 1);
+$color-secondary-dark : rgba(7, 7, 7, 1);
+$black                : rgba(0, 0, 0, 1);
+$white                : rgba(256, 256, 256, 1);
