@@ -7,25 +7,60 @@
   padding: 8px;
 }
 
-@media (min-width: $grid-sm-breakpoint) and (max-width: $grid-md-breakpoint - 1px){
-  // @include col-list(12, 3);
-  // @include col-list(8, 4);
+.grid-strict {
+  width: 100%;
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+.grid {
+  @extend .grid-strict;
+  .col {
+    padding: $grid-vertical-padding $grid-gutter-padding;
+  }
+}
+
+.row:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.col {
+  float: left;
+  width: 100%;
+  max-width: 100%;
+}
+
+@mixin col-list($columns, $prefix) {
+  @for $i from 1 through $columns {
+    .col-#{$prefix}#{$columns}-#{$i} {
+      width: $i / $columns * 100%;
+    }
+  }
+}
+
+@include col-list(24, 'xs');
+
+@media (min-width: $grid-sm-breakpoint){
+  @include col-list(24, 'sm');
   .container {
     max-width: $grid-sm-breakpoint * 15 / 16;
   }
 }
 
-@media (min-width: $grid-md-breakpoint) and (max-width: $grid-lg-breakpoint - 1px){
-  // @include col-list(12, 12);
-  // @include col-list(8, 8);
+@media (min-width: $grid-md-breakpoint){
+  @include col-list(24, 'md');
   .container {
     max-width: $grid-md-breakpoint * 15 / 16;
   }
 }
 
 @media (min-width: $grid-lg-breakpoint){
-  // @include col-list(12, 24);
-  // @include col-list(8, 8);
+  @include col-list(24, 'lg');
   .container {
     max-width: $grid-lg-breakpoint * 15 / 16;
   }
