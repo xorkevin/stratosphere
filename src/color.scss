@@ -1,4 +1,25 @@
-body {
-  background-color: $background;
-  color           : $color-text-dark-1;
-}
+// Color //
+$color-primary-light  : #DFE2E5 !default;
+$color-primary-dark   : #4A5A6B !default;
+$color-accent         : #A86D76 !default;
+$color-secondary-light: #37393A !default;
+$color-secondary-dark : #070707 !default;
+$background           : #FCFAFA !default;
+$black                : #000000 !default;
+$white                : #FFFFFF !default;
+
+$color-text-dark-1: rgba($black, 0.87) !default; // primary
+$color-text-dark-2: rgba($black, 0.54) !default; // secondary
+$color-text-dark-3: rgba($black, 0.38) !default; // disabled/hint/icons
+$color-text-dark-4: rgba($black, 0.12) !default; // dividers
+
+$color-text-light-1: rgba($white, 1) !default; // primary
+$color-text-light-2: rgba($white, 0.7) !default; // secondary
+$color-text-light-3: rgba($white, 0.5) !default; // disabled/hint/icons
+$color-text-light-4: rgba($white, 0.12) !default; // dividers
+
+// $color-grey-900: #212121;
+// $color-grey-800: #424242;
+// $color-grey-300: #E0E0E0;
+// $color-grey-100: #F5F5F5;
+// $color-grey-50 : #FAFAFA;
