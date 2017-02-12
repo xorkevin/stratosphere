@@ -23,8 +23,9 @@
   }
 
   .body {
-    padding: $card-padding;
-    color  : $color-text-dark-1;
+    padding         : $card-padding;
+    background-color: $white;
+    color           : $color-text-dark-1;
   }
 
   &.sm {
