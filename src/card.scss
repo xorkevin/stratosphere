@@ -6,7 +6,7 @@
   margin       : $card-margin auto;
 
   .title {
-    padding        : $card-padding;
+    padding        : $card-padding $card-padding-h;
     background     : no-repeat center / cover;
     width          : 100%;
     max-width      : 100%;
@@ -22,10 +22,15 @@
     }
   }
 
-  .body {
-    padding         : $card-padding;
+  .body, .bar {
+    padding         : $card-padding $card-padding-h;
     background-color: $white;
     color           : $color-text-dark-1;
+  }
+
+  .bar {
+    border          : 1px $color-text-dark-4;
+    border-style    : solid none;
   }
 
   &.sm {

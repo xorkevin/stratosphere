@@ -9,8 +9,14 @@ $grid-vertical-padding: 8px !default;
 $typography-base-size: 12px !default;
 
 // Card //
-$card-sm-size: 256px !default;
-$card-md-size: $card-sm-size * 1.5 !default;
-$card-lg-size: $card-md-size * 1.5 !default;
-$card-padding: 16px !default;
-$card-margin : 16px !default;
+$card-sm-size  : 256px !default;
+$card-md-size  : $card-sm-size * 1.5 !default;
+$card-lg-size  : $card-md-size * 1.5 !default;
+$card-padding  : 8px !default;
+$card-padding-h: $card-padding * 2 !default;
+$card-margin   : 8px !default;
+
+// Button //
+$button-padding  : 8px !default;
+$button-padding-h: $button-padding * 2 !default;
+$button-min-width: 48px !default;
