@@ -1,23 +1,66 @@
 .card {
-  box-shadow: 0px 1px 2px 0px rgba(0,0,0,.42), 0px 2px 8px 0px rgba(0,0,0,.11);
-  border-radius: 2px;
+  box-shadow   : 0px 1px 2px 0px rgba(0,0,0,.42), 0px 2px 8px 0px rgba(0,0,0,.11);
+  border-radius: 4px;
+  margin       : $card-margin;
+  overflow     : hidden;
 
   .title {
+    padding        : $card-padding;
+    background     : no-repeat center / cover;
+    width          : 100%;
+    display        : flex;
+    justify-content: flex-start;
+    align-items    : flex-end;
+    text-align     : left;
+    color          : $color-text-light-1;
+
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 300;
+      margin: 0;
+    }
+  }
+
+  .body {
     padding: $card-padding;
-    background: no-repeat center center;
-    background-size: 100%;
-    width: 100%;
-    display: flex;
-    align-items: flex-end;
-    color: $color-text-light-1;
+    color: $color-text-dark-1;
   }
 }
 
 .card.square-sm {
-  width: 256px;
-  height: 256px;
+  width : $card-sm-size;
+  height: $card-sm-size;
 
   .title {
-    height: 128px;
+    height: $card-sm-size * 2 / 3;
+  }
+
+  .body {
+    height: $card-sm-size / 3;
+  }
+}
+
+.card.square-md {
+  width : $card-md-size;
+  height: $card-md-size;
+
+  .title {
+    height: $card-md-size * 2 / 3;
+  }
+
+  .body {
+    height: $card-md-size / 3;
+  }
+}
+
+.card.square-lg {
+  width : $card-lg-size;
+  height: $card-lg-size;
+
+  .title {
+    height: $card-lg-size * 2 / 3;
+  }
+
+  .body {
+    height: $card-lg-size / 3;
   }
 }

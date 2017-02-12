@@ -6,10 +6,14 @@ $grid-gutter-padding  : 8px !default;
 $grid-vertical-padding: 8px !default;
 
 // Typography //
-$typography-base-size: 14px !default;
+$typography-base-size: 12px !default;
 
 // Card //
+$card-sm-size: 256px;
+$card-md-size: $card-sm-size * 1.5;
+$card-lg-size: $card-md-size * 1.5;
 $card-padding: 16px;
+$card-margin : 16px;
 
 // Color //
 $color-primary-light  : #DCEDFF !default;
