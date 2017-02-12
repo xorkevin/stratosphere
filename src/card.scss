@@ -3,6 +3,7 @@
   border-radius: 4px;
   overflow     : hidden;
   max-width    : 100%;
+  margin       : $card-margin auto;
 
   .title {
     padding        : $card-padding;
@@ -23,45 +24,38 @@
 
   .body {
     padding: $card-padding;
-    color: $color-text-dark-1;
-  }
-}
-
-.card.square-sm {
-  width : $card-sm-size;
-  height: $card-sm-size;
-
-  .title {
-    height: $card-sm-size * 2 / 3;
+    color  : $color-text-dark-1;
   }
 
-  .body {
-    height: $card-sm-size / 3;
-  }
-}
-
-.card.square-md {
-  width : $card-md-size;
-  height: $card-md-size;
-
-  .title {
-    height: $card-md-size * 2 / 3;
+  &.sm {
+    .title {
+      height: $card-sm-size * 2 / 3;
+    }
   }
 
-  .body {
-    height: $card-md-size / 3;
-  }
-}
-
-.card.square-lg {
-  width : $card-lg-size;
-  height: $card-lg-size;
-
-  .title {
-    height: $card-lg-size * 2 / 3;
+  &.md {
+    .title {
+      height: $card-md-size * 2 / 3;
+    }
   }
 
-  .body {
-    height: $card-lg-size / 3;
+  &.lg {
+    .title {
+      height: $card-lg-size * 2 / 3;
+    }
+  }
+
+  &.square {
+    &.sm {
+      width : $card-sm-size;
+    }
+
+    &.md {
+      width : $card-md-size;
+    }
+
+    &.lg {
+      width : $card-lg-size;
+    }
   }
 }

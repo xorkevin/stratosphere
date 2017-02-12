@@ -9,11 +9,11 @@ $grid-vertical-padding: 8px !default;
 $typography-base-size: 12px !default;
 
 // Card //
-$card-sm-size: 256px;
-$card-md-size: $card-sm-size * 1.5;
-$card-lg-size: $card-md-size * 1.5;
-$card-padding: 16px;
-$card-margin : 16px;
+$card-sm-size: 256px !default;
+$card-md-size: $card-sm-size * 1.5 !default;
+$card-lg-size: $card-md-size * 1.5 !default;
+$card-padding: 16px !default;
+$card-margin : 16px !default;
 
 // Color //
 $color-primary-light  : #DCEDFF !default;
