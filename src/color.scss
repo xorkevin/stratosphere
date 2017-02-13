@@ -1,7 +1,8 @@
 // Color //
-$color-primary-light  : #DFE2E5 !default;
-$color-primary-dark   : #4A5A6B !default;
-$color-accent         : #A86D76 !default;
+$color-primary-light  : #A8CACA !default;
+$color-primary-dark   : #408C8C !default;
+$color-accent         : #C64949 !default;
+$color-accent-light   : #A86D76 !default;
 $color-secondary-light: #37393A !default;
 $color-secondary-dark : #070707 !default;
 $background           : #FCFAFA !default;
@@ -23,3 +24,6 @@ $color-text-light-4: rgba($white, 0.12) !default; // dividers
 // $color-grey-300: #E0E0E0;
 // $color-grey-100: #F5F5F5;
 // $color-grey-50 : #FAFAFA;
+
+$color-valid  : #61D095 !default;
+$color-invalid: #d50000 !default;
