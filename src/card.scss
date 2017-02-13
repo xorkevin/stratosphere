@@ -7,18 +7,23 @@
 
   .title {
     padding        : $card-padding $card-padding-h;
-    background     : no-repeat center / cover;
+    background     : no-repeat center center / cover;
     width          : 100%;
     max-width      : 100%;
     display        : flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items    : flex-end;
-    text-align     : left;
     color          : $color-text-light-1;
 
     h1, h2, h3, h4, h5, h6 {
       font-weight: 300;
       margin: 0;
+    }
+
+    .info {
+      font-weight: 700;
+      font-size  : 1.5rem;
+      color      : $color-text-light-1;
     }
   }
 
@@ -29,8 +34,8 @@
   }
 
   .bar {
-    border          : 1px $color-text-dark-4;
-    border-style    : solid none;
+    border      : 1px $color-text-dark-4;
+    border-style: solid none;
   }
 
   &.sm {
@@ -53,15 +58,15 @@
 
   &.square {
     &.sm {
-      width : $card-sm-size;
+      width: $card-sm-size;
     }
 
     &.md {
-      width : $card-md-size;
+      width: $card-md-size;
     }
 
     &.lg {
-      width : $card-lg-size;
+      width: $card-lg-size;
     }
   }
 }
