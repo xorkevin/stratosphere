@@ -32,7 +32,5 @@
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.3.0"
   },
-  "dependencies": {
-    "normalize.css": "^5.0.0"
-  }
+  "dependencies": {}
 }
