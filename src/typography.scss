@@ -70,4 +70,13 @@ html, body {
       margin: 2rem 0.25rem;
     }
   }
+
+  a {
+    color: $color-accent;
+    text-decoration: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
