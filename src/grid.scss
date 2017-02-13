@@ -23,10 +23,16 @@
   }
 }
 
-.row:after {
-  content: "";
-  display: block;
-  clear: both;
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items    : center;
+
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
 }
 
 .col {
