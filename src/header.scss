@@ -32,3 +32,17 @@ header, .header, .hero {
 header, .header {
   height: 100vh;
 }
+
+.hero {
+  &.sm {
+    height: $hero-sm-size * 2 / 3;
+  }
+
+  &.md {
+    height: $hero-md-size * 2 / 3;
+  }
+
+  &.lg {
+    height: $hero-lg-size * 2 / 3;
+  }
+}

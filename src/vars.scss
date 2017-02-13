@@ -20,3 +20,8 @@ $card-margin   : 8px !default;
 $button-padding  : 8px !default;
 $button-padding-h: $button-padding * 2 !default;
 $button-min-width: 48px !default;
+
+// Hero //
+$hero-sm-size: 512px !default;
+$hero-md-size: $hero-sm-size * 1.5 !default;
+$hero-lg-size: $hero-md-size * 1.5 !default;
