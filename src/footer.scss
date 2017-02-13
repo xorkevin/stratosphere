@@ -1,0 +1,13 @@
+footer {
+  background-color: $color-text-dark-1;
+  padding         : $footer-padding;
+  color           : $color-text-light-1;
+
+  ul {
+    list-style: none;
+    color     : $color-text-light-2;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+  }
+}
