@@ -62,7 +62,7 @@ html, body {
 
       small {
         text-transform: uppercase;
-        font-size: 0.42em;
+        font-size     : 0.42em;
       }
     }
 
@@ -72,7 +72,7 @@ html, body {
   }
 
   a {
-    color: $color-accent;
+    color          : $color-accent;
     text-decoration: inherit;
 
     &:hover {
