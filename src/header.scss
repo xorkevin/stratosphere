@@ -3,8 +3,8 @@ header, .header, .hero {
   color          : $color-text-light-1;
   display        : flex;
   justify-content: space-between;
-  align-content  : flex-end;
-  align-items    : flex-end;
+  align-content  : center;
+  align-items    : center;
 
   h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
@@ -31,6 +31,12 @@ header, .header, .hero {
 
 header, .header {
   height: 100vh;
+}
+
+@media (max-width: $grid-sm-breakpoint - 1) {
+  header, .header {
+    height: $hero-lg-size * 2 / 3;
+  }
 }
 
 .hero {
