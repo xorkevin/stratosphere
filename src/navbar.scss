@@ -1,0 +1,36 @@
+nav, .nav {
+  position        : fixed;
+  min-height          : $nav-height;
+  width           : 100%;
+  background-color: $background-transparent;
+  color           : $color-text-dark-2;
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  transition      : 0.125s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight     : 700;
+  text-transform  : uppercase;
+
+  &.top {
+    background-color: transparent;
+  }
+
+  .container {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+
+    .element {
+      margin: 0 $nav-margin 0 0;
+      float: left;
+
+      &:last-child {
+        margin: 0;
+      }
+
+      a {
+        color: $color-text-dark-2;
+      }
+    }
+  }
+}
