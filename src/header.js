@@ -23,7 +23,7 @@ class Header extends React.Component {
     if(this.props.animated){
       this.timerID = setInterval(
         () => {this.tick();},
-        7000
+        8000
       );
     }
   }
@@ -58,7 +58,7 @@ class Header extends React.Component {
           text2: this.props.text[nextIndex(k, this.props.text.length)],
         });
       }, 500);
-    },1125);
+    },1800);
   }
 
   componentWillUnmount() {
