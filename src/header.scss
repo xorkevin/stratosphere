@@ -1,5 +1,5 @@
 header, .header, .hero {
-  background     : no-repeat center center / cover fixed;
+  background     : no-repeat center center / cover;
   color          : $color-text-light-1;
   display        : flex;
   justify-content: space-between;
@@ -27,32 +27,13 @@ header, .header, .hero {
   h6 {
     font-size: 1.8rem;
   }
-}
 
-header, .header {
-  height: 100vh;
-}
-
-@media (max-width: $grid-sm-breakpoint - 1) {
-  header, .header {
-    height: $hero-lg-size * 2 / 3;
-  }
-}
-
-.hero {
-  &.sm {
-    height: $hero-sm-size * 2 / 3;
-  }
-
-  &.md {
-    height: $hero-md-size * 2 / 3;
-  }
-
-  &.lg {
-    height: $hero-lg-size * 2 / 3;
+  &.fixed {
+    background: no-repeat center center / cover fixed;
   }
 
   &.animated {
+    display: block;
     overflow: hidden;
     position: relative;
     z-index: 32;
@@ -84,6 +65,36 @@ header, .header {
         animation-iteration-count: 1;
       }
     }
+
+    &.fixed {
+      .inner-static, .inner {
+        background: no-repeat center center / cover fixed;
+      }
+    }
+  }
+}
+
+header, .header {
+  height: 100vh;
+}
+
+@media (max-width: $grid-sm-breakpoint - 1) {
+  header, .header {
+    height: $hero-lg-size * 2 / 3;
+  }
+}
+
+.hero {
+  &.sm {
+    height: $hero-sm-size * 2 / 3;
+  }
+
+  &.md {
+    height: $hero-md-size * 2 / 3;
+  }
+
+  &.lg {
+    height: $hero-lg-size * 2 / 3;
   }
 }
 

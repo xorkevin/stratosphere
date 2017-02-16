@@ -7,14 +7,18 @@ const nextIndex = (current, cap)=>{
 class Header extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {animate: false, index: 0, imgUrl: props.images[0], imgUrl2: props.images[nextIndex(0, this.props.images.length)]};
+    if(props.animated){
+      this.state = {animate: false, index: 0, imgUrl: props.images[0], imgUrl2: props.images[nextIndex(0, this.props.images.length)]};
+    }
   }
 
   componentDidMount() {
-    this.timerID = setInterval(
-      () => {this.tick();},
-      7000
-    );
+    if(this.props.animated){
+      this.timerID = setInterval(
+        () => {this.tick();},
+        7000
+      );
+    }
   }
 
   tick() {
@@ -45,24 +49,41 @@ class Header extends React.Component {
   }
 
   componentWillUnmount() {
-    clearInterval(this.timerID);
+    if(this.props.animated){
+      clearInterval(this.timerID);
+    }
   }
 
   render(){
-    let k = ["head"];
-    if(this.state.animate){
-      k.push("animate");
+    let k = [];
+    if(this.props.fixed){
+      k.push("fixed");
     }
-    return <div className={k.join(" ")}>
-      <div className="inner-static hero md" style={{backgroundImage: "url(" + this.state.imgUrl + ")"}}>
-        <div className="container padded">
+    if(this.props.animated){
+      k.push("animated");
+
+      if(this.state.animate){
+        k.push("animate");
+      }
+    }
+    if(this.props.animated){
+      return <header className={k.join(" ")}>
+        <div className="inner-static header" style={{backgroundImage: "url(" + this.state.imgUrl + ")"}}>
+          <div className="container padded">
+          </div>
         </div>
-      </div>
-      <div className="inner hero md" style={{backgroundImage: "url(" + this.state.imgUrl2 + ")"}}>
-        <div className="container padded">
+        <div className="inner header" style={{backgroundImage: "url(" + this.state.imgUrl2 + ")"}}>
+          <div className="container padded">
+          </div>
         </div>
-      </div>
-    </div>;
+      </header>;
+    } else {
+      return <header className={k.join(" ")} style={{backgroundImage: "url(" + this.props.image + ")"}}>
+        <div className="container padded">
+          <h1>Welcome</h1>
+        </div>
+      </header>;
+    }
   }
 }
 

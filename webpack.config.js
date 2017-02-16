@@ -12,15 +12,21 @@ module.exports = {
     filename: '[name].js',
   },
   module: {
-    rules: [{
-      test: /\.s?css$/,
-      use: ExtractTextPlugin.extract({
-        use: [
-          {loader: "css-loader", options: {minimize: true}},
-          {loader: "sass-loader"},
-        ]
-      }),
-    }],
+    rules: [
+      {
+        test: /\.s?css$/,
+        use: ExtractTextPlugin.extract({
+          use: [
+            {loader: "css-loader", options: {minimize: true}},
+            {loader: "sass-loader"},
+          ]
+        }),
+      },
+      {
+        test: /\.js$/,
+        use: [{loader: "babel-loader"}],
+      },
+    ],
   },
   resolve: {
     modules: [path.resolve(__dirname, "src"), "node_modules"],
