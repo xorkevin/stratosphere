@@ -103,13 +103,13 @@ header, .header {
   }
 
   80% {
-    -webkit-transform: perspective(512px) translate3d(-64px, 0, -64px) rotate3d(0, 1, 0, 30deg);
-    transform: perspective(512px) translate3d(-64px, 0, -64px) rotate3d(0, 1, 0, 30deg);
+    -webkit-transform: perspective(512px) translate3d(-128px, 0, -128px) rotate3d(0, 1, 0, 15deg);
+    transform: perspective(512px) translate3d(-128px, 0, -128px) rotate3d(0, 1, 0, 15deg);
   }
 
   82% {
-    -webkit-transform: perspective(512px) translate3d(-64px, 0, -64px) rotate3d(0, 1, 0, 30deg);
-    transform: perspective(512px) translate3d(-64px, 0, -64px) rotate3d(0, 1, 0, 30deg);
+    -webkit-transform: perspective(512px) translate3d(-128px, 0, -128px) rotate3d(0, 1, 0, 15deg);
+    transform: perspective(512px) translate3d(-128px, 0, -128px) rotate3d(0, 1, 0, 15deg);
   }
 
   84% {
@@ -123,6 +123,11 @@ header, .header {
 
 @keyframes head-inner {
   from {
+  }
+
+  5% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
   }
 
   80% {

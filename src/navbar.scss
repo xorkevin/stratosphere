@@ -10,7 +10,7 @@ nav, .nav {
   transition      : 0.125s cubic-bezier(0.4, 0, 0.2, 1);
   font-weight     : 700;
   text-transform  : uppercase;
-  z-index         : 64px;
+  z-index         : 64;
 
   &.top {
     background-color: transparent;
