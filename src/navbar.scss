@@ -1,6 +1,6 @@
 nav, .nav {
   position        : fixed;
-  min-height          : $nav-height;
+  min-height      : $nav-height;
   width           : 100%;
   background-color: $background-transparent;
   color           : $color-text-dark-2;
@@ -10,6 +10,7 @@ nav, .nav {
   transition      : 0.125s cubic-bezier(0.4, 0, 0.2, 1);
   font-weight     : 700;
   text-transform  : uppercase;
+  box-shadow      : 0px 1px 2px 0px rgba(0,0,0,.24), 0px 1px 4px 0px rgba(0,0,0,.11);
   z-index         : 64;
 
   &.top {
@@ -21,9 +22,15 @@ nav, .nav {
     justify-content: space-between;
     align-items    : center;
 
+    &>.element {
+      display        : flex;
+      justify-content: center;
+      align-items    : center;
+    }
+
     .element {
       margin: 0 $nav-margin 0 0;
-      float: left;
+      float : left;
 
       &:last-child {
         margin: 0;

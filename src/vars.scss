@@ -1,5 +1,5 @@
 // Grid //
-$grid-sm-breakpoint   : 512px !default;
+$grid-sm-breakpoint   : 512px * 1.5 !default;
 $grid-md-breakpoint   : $grid-sm-breakpoint * 1.5 !default;
 $grid-lg-breakpoint   : $grid-md-breakpoint * 1.5 !default;
 $grid-gutter-padding  : 8px !default;

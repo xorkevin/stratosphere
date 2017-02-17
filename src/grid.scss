@@ -24,10 +24,6 @@
 }
 
 .row {
-  display        : flex;
-  justify-content: space-between;
-  align-items    : center;
-
   &:after {
     content: "";
     display: block;
@@ -53,6 +49,11 @@
 
 @media (min-width: $grid-sm-breakpoint) {
   @include col-list(24, 'sm');
+  .row {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+  }
   .container {
     max-width: $grid-sm-breakpoint * 15 / 16;
   }

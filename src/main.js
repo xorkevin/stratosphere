@@ -3,7 +3,21 @@ import 'main.scss';
 import React from 'react';
 import {render} from 'react-dom';
 
+import Navbar from 'navbar';
 import Header from 'header';
+
+render(
+  <Navbar left={[
+    <div className="element"><a rel="noreferrer" href="#">Home</a></div>,
+    <div className="element"><a rel="noreferrer" href="#">About</a></div>,
+    <div className="element"><a rel="noreferrer" href="#">Products</a></div>,
+  ]} right={[
+    <div className="element"><a rel="noreferrer" href="#">Contact Us</a></div>,
+    <div className="element"><a rel="noreferrer" target="_blank" href="https://github.com/xorkevin"><i className="fa fa-github" aria-hidden="true"></i> xorkevin</a></div>,
+  ]}>
+  </Navbar>,
+  document.getElementById('nav')
+);
 
 render(
   <Header
