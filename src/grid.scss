@@ -28,7 +28,11 @@
 }
 
 .grid {
-  width: 100%;
+  width      : 100%;
+  display    : flex;
+  align-items: flex-start;;
+  flex-wrap  : wrap;
+
   &:after {
     content: "";
     display: block;
@@ -62,8 +66,7 @@
     }
   }
 
-  &.flex {
-    display: flex;
+  &.center {
     align-items: center;
   }
 }
