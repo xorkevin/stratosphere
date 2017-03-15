@@ -8,7 +8,7 @@ nav, .nav {
   justify-content : center;
   align-items     : center;
   transition      : 0.125s cubic-bezier(0.4, 0, 0.2, 1);
-  font-weight     : 700;
+  letter-spacing  : 2px;
   text-transform  : uppercase;
   box-shadow      : 0px 1px 2px 0px rgba(0,0,0,.24), 0px 1px 4px 0px rgba(0,0,0,.11);
   z-index         : 64;
@@ -37,7 +37,13 @@ nav, .nav {
       }
 
       a {
-        color: $color-text-dark-2;
+        color          : $color-text-dark-2;
+        text-decoration: none;
+        transition     : 0.125s cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover {
+          color: $color-accent;
+        }
       }
     }
   }
