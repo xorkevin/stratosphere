@@ -12,11 +12,13 @@ button {
   cursor          : pointer;
 
   &:hover {
-    background-color: $color-text-dark-4;
+    background-color: $color-text-dark-3;
+    color: lighten(saturate($color-accent, 25%), 12.5%);
   }
 
   &:active {
     background-color: $color-text-dark-3;
+    color: lighten(saturate($color-accent, 25%), 12.5%);
   }
 
   &:focus {

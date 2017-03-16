@@ -1,12 +1,9 @@
 // Color //
 $black                 : #000000 !default;
 $white                 : #FFFFFF !default;
-$color-primary-light   : #A8CACA !default;
-$color-primary-dark    : #408C8C !default;
-$color-accent          : #C64949 !default;
-$color-accent-light    : #A86D76 !default;
-$color-secondary-light : #37393A !default;
-$color-secondary-dark  : #070707 !default;
+$color-primary         : #224A7F !default;
+$color-accent          : #EFB87A !default;
+$color-secondary       : #37393A !default;
 $background            : #FAFBFC !default;
 $background-transparent: rgba($white, 0.94) !default;
 
@@ -27,4 +24,4 @@ $color-text-light-4: rgba($white, 0.12) !default; // dividers
 // $color-grey-50 : #FAFAFA;
 
 $color-valid  : #61D095 !default;
-$color-invalid: #d50000 !default;
+$color-invalid: #D3001F !default;
