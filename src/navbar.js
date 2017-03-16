@@ -58,15 +58,17 @@ class Navbar extends React.Component {
       }
     }
     return <nav>
-      <div className="container padded">
-        <div className="element">
-          {j}
-        </div>
-        <div className="element">
-          {this.props.children}
-        </div>
-        <div className="element">
-          {k}
+      <div className="nav-container">
+        <div className="container padded">
+          <div className="element">
+            {j}
+          </div>
+          <div className="element">
+            {this.props.children}
+          </div>
+          <div className="element">
+            {k}
+          </div>
         </div>
       </div>
     </nav>;

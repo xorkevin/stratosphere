@@ -1,6 +1,6 @@
 nav, .nav {
   position        : fixed;
-  min-height      : $nav-height;
+  height          : $nav-height;
   width           : 100%;
   background-color: $background-transparent;
   color           : $color-text-dark-2;
@@ -12,45 +12,61 @@ nav, .nav {
   text-transform  : uppercase;
   box-shadow      : 0px 1px 2px 0px rgba(0,0,0,.24), 0px 1px 4px 0px rgba(0,0,0,.11);
   z-index         : 64;
+  overflow        : hidden;
 
   &.top {
     background-color: transparent;
   }
 
-  .container {
+  &>.nav-container {
     display        : flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items    : center;
+    width          : 100%;
+    height         : 100%;
+    overflow-y     : hidden;
+    overflow-x     : auto;
 
-    &>.element {
+    &>.container {
       display        : flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items    : center;
-    }
+      white-space    : nowrap;
 
-    .item {
-      margin    : 0 $nav-margin 0 0;
-      float     : left;
-      color     : $color-text-dark-2;
-      transition: 0.125s cubic-bezier(0.4, 0, 0.2, 1);
+      &>.element {
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+        margin         : 0 8px;
 
-      &:last-child {
-        margin: 0;
+        &>.item {
+          margin     : 0 $nav-margin 0 0;
+          float      : left;
+          color      : $color-text-dark-2;
+          transition : 0.125s cubic-bezier(0.4, 0, 0.2, 1);
+          white-space: nowrap;
+
+          &:last-child {
+            margin: 0;
+          }
+
+          &:hover {
+            color : lighten(saturate($color-accent, 25%), 6.25%);
+            cursor: pointer;
+          }
+
+          &:active {
+            color: lighten(saturate($color-accent, 25%), 6.25%);
+          }
+
+          a {
+            color          : inherit;
+            text-decoration: inherit;
+          }
+        }
       }
 
-      &:hover {
-        color : lighten(saturate($color-accent, 25%), 6.25%);
-        cursor: pointer;
-      }
-
-      &:active {
-        color: lighten(saturate($color-accent, 25%), 6.25%);
-      }
-
-      a {
-        color          : inherit;
-        text-decoration: inherit;
-      }
     }
   }
+
 }
