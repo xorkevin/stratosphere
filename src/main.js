@@ -39,6 +39,7 @@ render(
 render(
   <Footer>
     <h3>Footer</h3>
+    <h4><Anchor ext href="https://github.com/xorkevin/stratosphere"><FaIcon border icon="github"/></Anchor></h4>
     <div className="grid center">
       <div className="col md-8 sm-12">
         <h4>About</h4>
@@ -59,7 +60,7 @@ render(
       <div className="col md-8 sm-12">
         <ul>
           <li><FaIcon icon="code"/> with <FaIcon icon="heart-o"/> by Kevin Wang</li>
-          <li><Anchor ext href="https://github.com/xorkevin"><FaIcon border icon="github"/> xorkevin</Anchor></li>
+          <li><Anchor ext href="https://github.com/xorkevin"><FaIcon icon="github"/> xorkevin</Anchor></li>
         </ul>
       </div>
     </div>
