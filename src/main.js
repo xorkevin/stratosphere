@@ -12,6 +12,7 @@ render(
     ['Home', ''],
     ['Cards', 'cards'],
     ['Typography', 'typography'],
+    ['Form', 'form'],
   ]} right={[
     <Anchor href="#">Contact</Anchor>,
     <Anchor ext href="https://github.com/xorkevin"><i className="fa fa-github" aria-hidden="true"></i> xorkevin</Anchor>,
