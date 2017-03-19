@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700|Montserrat:200,400');
-
 html, body {
   font-size       : $typography-base-size;
   font-family     : $typography-base-font;
@@ -77,6 +75,6 @@ html, body {
 
   .section-header {
     font-family: $typography-secondary-font;
-    font-weight: 200;
+    font-weight: 300;
   }
 }
