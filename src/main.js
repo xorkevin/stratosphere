@@ -58,7 +58,7 @@ render(
       <div className="col md-8 sm-12">
         <ul>
           <li><i className="fa fa-code" aria-hidden="true"></i> with <i className="fa fa-heart-o" aria-hidden="true"></i> by Kevin Wang</li>
-          <li><a rel="noreferrer" target="_blank" href="https://github.com/xorkevin"><i className="fa fa-github" aria-hidden="true"></i> xorkevin</a></li>
+          <li><Anchor ext href="https://github.com/xorkevin"><i className="fa fa-github" aria-hidden="true"></i> xorkevin</Anchor></li>
         </ul>
       </div>
     </div>
