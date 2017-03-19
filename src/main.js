@@ -7,6 +7,7 @@ import Navbar from 'navbar';
 import Header from 'header';
 import Anchor from 'anchor';
 import Footer from 'footer';
+import FaIcon from 'faicon';
 
 render(
   <Navbar left={[
@@ -16,7 +17,7 @@ render(
     ['Form', 'form'],
   ]} right={[
     <Anchor href="#">Contact</Anchor>,
-    <Anchor ext href="https://github.com/xorkevin"><i className="fa fa-github" aria-hidden="true"></i> xorkevin</Anchor>,
+    <Anchor ext href="https://github.com/xorkevin"><FaIcon icon="github"/> xorkevin</Anchor>,
   ]}>
   </Navbar>,
   document.getElementById('nav')
@@ -57,8 +58,8 @@ render(
       </div>
       <div className="col md-8 sm-12">
         <ul>
-          <li><i className="fa fa-code" aria-hidden="true"></i> with <i className="fa fa-heart-o" aria-hidden="true"></i> by Kevin Wang</li>
-          <li><Anchor ext href="https://github.com/xorkevin"><i className="fa fa-github" aria-hidden="true"></i> xorkevin</Anchor></li>
+          <li><FaIcon icon="code"/> with <FaIcon icon="heart-o"/> by Kevin Wang</li>
+          <li><Anchor ext href="https://github.com/xorkevin"><FaIcon border icon="github"/> xorkevin</Anchor></li>
         </ul>
       </div>
     </div>
