@@ -4,6 +4,7 @@ button {
   background-color: transparent;
   border          : 0;
   border-radius   : 4px;
+  font-family     : $typography-secondary-font;
   font-weight     : 700;
   text-transform  : uppercase;
   color           : $color-accent;
@@ -13,12 +14,12 @@ button {
 
   &:hover {
     background-color: $color-text-dark-4;
-    color: darken(saturate($color-accent, 12.5%), 12.5%);
+    color: darken($color-accent, 12.5%);
   }
 
   &:active {
     background-color: $color-text-dark-4;
-    color: darken(saturate($color-accent, 12.5%), 12.5%);
+    color: darken($color-accent, 12.5%);
   }
 
   &:focus {

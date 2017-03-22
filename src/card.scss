@@ -6,25 +6,31 @@
   height       : 100%;
 
   &>.title {
-    padding        : $card-padding $card-padding-h;
     background     : no-repeat center center / cover;
-    width          : 100%;
-    max-width      : 100%;
-    display        : flex;
-    justify-content: space-between;
-    align-items    : flex-end;
-    color          : $color-text-light-1;
 
-    h1, h2, h3, h4, h5, h6 {
-      font-family: $typography-secondary-font;
-      font-weight: 300;
-      margin     : 0;
-    }
+    &>.inner {
+      height         : 100%;
+      width          : 100%;
+      max-width      : 100%;
+      padding        : $card-padding $card-padding-h;
+      display        : flex;
+      justify-content: space-between;
+      align-items    : flex-end;
+      color          : $color-text-light-1;
+      background     : linear-gradient(0deg, $color-text-dark-4 2rem, rgba(0,0,0,0) 3rem);
 
-    .info {
-      font-weight: 700;
-      font-size  : 1.5rem;
-      color      : $color-text-light-1;
+      h1, h2, h3, h4, h5, h6 {
+        font-family: $typography-secondary-font;
+        font-weight: 300;
+        text-shadow: 0 1px 8px $color-text-dark-4, 0 1px 4px $color-text-dark-4;
+        margin     : 0;
+      }
+
+      .info {
+        font-weight: 700;
+        font-size  : 1.5rem;
+        color      : $color-text-light-1;
+      }
     }
   }
 
