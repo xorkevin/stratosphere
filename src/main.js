@@ -7,6 +7,7 @@ import Navbar from 'navbar';
 import Header from 'header';
 import Anchor from 'anchor';
 import Footer from 'footer';
+import Card   from 'card';
 import FaIcon from 'faicon';
 
 render(
@@ -66,4 +67,31 @@ render(
     </div>
   </Footer>,
   document.getElementById('footer')
-)
+);
+
+render(
+  <div>
+    <Card size="lg" background="https://images.pexels.com/photos/129922/pexels-photo-129922.jpeg?dl&fit=crop&w=1280&h=850" title={[
+        <h3>Vivamus nibh enim</h3>,<button><FaIcon icon="heart"/></button>
+      ]} bar={[
+        <button>Share</button>
+      ]}>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla aliquet condimentum. Nunc facilisis orci dui, sit amet dictum massa porta at. Mauris augue nisi, scelerisque ac suscipit sit amet, egestas ut risus. In hac habitasse platea dictumst. Vivamus nibh enim, dignissim quis consequat at, sagittis in magna.
+    </Card>
+    <Card size="md" background="https://images.pexels.com/photos/129922/pexels-photo-129922.jpeg?dl&fit=crop&w=1280&h=850" title={[
+        <h3>Vivamus nibh enim</h3>,<button><FaIcon icon="heart"/></button>
+      ]} bar={[
+        <button>Share</button>
+      ]}>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla aliquet condimentum. Nunc facilisis orci dui, sit amet dictum massa porta at. Mauris augue nisi, scelerisque ac suscipit sit amet, egestas ut risus. In hac habitasse platea dictumst. Vivamus nibh enim, dignissim quis consequat at, sagittis in magna.
+    </Card>
+    <Card size="sm" background="https://images.pexels.com/photos/129922/pexels-photo-129922.jpeg?dl&fit=crop&w=1280&h=850" title={[
+        <h3>Vivamus nibh enim</h3>,<button><FaIcon icon="heart"/></button>
+      ]} bar={[
+        <button>Share</button>
+      ]}>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla aliquet condimentum. Nunc facilisis orci dui, sit amet dictum massa porta at. Mauris augue nisi, scelerisque ac suscipit sit amet, egestas ut risus. In hac habitasse platea dictumst. Vivamus nibh enim, dignissim quis consequat at, sagittis in magna.
+    </Card>
+  </div>,
+  document.getElementById('isolated-cards')
+);
