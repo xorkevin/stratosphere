@@ -20,7 +20,7 @@ html, body {
   }
 
   h1, h2, h3, h4, h5, h6 {
-    margin: 0.75em 0.25rem 0.5em;
+    margin: 0.75em 0 0.5em;
     font-weight: 700;
   }
   h3, h4, h5, h6 {
@@ -49,7 +49,7 @@ html, body {
 
   .article {
     line-height: 1.8;
-    max-width  : 36rem;
+    max-width  : 42rem;
     margin     : auto;
     font-family: $typography-article-font;
 
@@ -65,7 +65,7 @@ html, body {
 
     p {
       margin: 2rem 0.25rem;
-      font-size: 1.125rem;
+      font-size: 1.25rem;
     }
   }
 
