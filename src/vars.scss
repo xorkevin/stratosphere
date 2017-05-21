@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Roboto:300,400');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700|Overpass:300,400,700|Source+Serif+Pro:400,400i,700');
 
 // Grid //
 $grid-sm-breakpoint   : 512px * 1.5 !default;
@@ -10,7 +10,8 @@ $grid-vertical-padding: 8px !default;
 // Typography //
 $typography-base-font: 'Lato', sans-serif;
 $typography-base-size: 14px !default;
-$typography-secondary-font: 'Roboto', sans-serif;
+$typography-secondary-font: 'Overpass', sans-serif;
+$typography-article-font: 'Source Serif Pro', sans-serif;
 
 // Card //
 $card-sm-size  : 256px !default;

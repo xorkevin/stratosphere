@@ -51,8 +51,11 @@ html, body {
     line-height: 1.8;
     max-width  : 36rem;
     margin     : auto;
+    font-family: $typography-article-font;
 
     h1, h2, h3, h4, h5, h6 {
+      font-family: $typography-base-font;
+
       small {
         font-family   : $typography-secondary-font;
         text-transform: uppercase;
@@ -62,6 +65,7 @@ html, body {
 
     p {
       margin: 2rem 0.25rem;
+      font-size: 1.125rem;
     }
   }
 
@@ -75,7 +79,7 @@ html, body {
   }
 
   .section-header {
-    font-family: $typography-secondary-font;
+    font-family: $typography-base-font;
     font-weight: 300;
   }
 }

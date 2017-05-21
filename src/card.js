@@ -14,10 +14,6 @@ class Card extends React.Component {
         backgroundImage: "url(" + this.props.background + ")",
       };
     }
-    console.log(s);
-    //
-    //
-    //
     return <div className={k.join(" ")}>
       <div className="title" style={s}>
         <div className="inner">
