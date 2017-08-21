@@ -19,7 +19,6 @@
       color          : $color-text-light-1;
 
       h1, h2, h3, h4, h5, h6 {
-        font-family: $typography-secondary-font;
         font-weight: 300;
         text-shadow: 0 1px 16px $color-text-dark-4, 0 1px 8px $color-text-dark-4, 0 1px 4px $color-text-dark-4;
         margin     : 0;
@@ -43,7 +42,7 @@
     overflow     : hidden;
     text-overflow: ellipsis;
     position     : relative;
-    font-size    : 1.125rem;
+    font-size    : 1rem;
 
     &:before {
       content:'';

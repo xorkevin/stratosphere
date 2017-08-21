@@ -1,11 +1,11 @@
 button {
   padding         : $button-padding $button-padding-h;
   min-width       : $button-min-width;
-  background-color: transparent;
+  background-color: $white;
   border          : 0;
   border-radius   : 4px;
-  font-family     : $typography-secondary-font;
   font-weight     : 700;
+  font-family     : $typography-base-font;
   text-transform  : uppercase;
   color           : $color-accent;
   text-align      : center;
@@ -13,13 +13,13 @@ button {
   cursor          : pointer;
 
   &:hover {
-    background-color: $color-text-dark-4;
-    color: darken($color-accent, 12.5%);
+    background-color: $color-accent;
+    color: $white;
   }
 
   &:active {
-    background-color: $color-text-dark-4;
-    color: darken($color-accent, 12.5%);
+    background-color: $color-accent;
+    color: $white;
   }
 
   &:focus {
