@@ -17,7 +17,13 @@ const scrollTo = (element, duration)=>{
   if(element){
     elementY = window.scrollY + document.getElementById(element).getBoundingClientRect().top;
   }
-  const targetY = document.body.scrollHeight - elementY < window.innerHeight ? document.body.scrollHeight - window.innerHeight : elementY - navHeight;
+  let targetY = elementY - navHeight;
+  if(targetY < 0) {
+    targetY = 0;
+  }
+  if(document.body.scrollHeight - elementY < window.innerHeight){
+    targetY = document.body.scrollHeight - window.innerHeight;
+  }
   const diff = targetY - startingY;
   let start;
   if(!diff){
