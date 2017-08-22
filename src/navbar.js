@@ -1,6 +1,7 @@
 import React from 'react';
 
 const scrollTime = 384;
+const navHeight = 64;
 
 const easing = (t)=>{
   if(t<.5){
@@ -16,7 +17,7 @@ const scrollTo = (element, duration)=>{
   if(element){
     elementY = window.scrollY + document.getElementById(element).getBoundingClientRect().top;
   }
-  const targetY = document.body.scrollHeight - elementY < window.innerHeight ? document.body.scrollHeight - window.innerHeight : elementY;
+  const targetY = document.body.scrollHeight - elementY < window.innerHeight ? document.body.scrollHeight - window.innerHeight : elementY - navHeight;
   const diff = targetY - startingY;
   let start;
   if(!diff){
