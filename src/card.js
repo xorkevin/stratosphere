@@ -2,12 +2,27 @@ import React from 'react';
 
 class Card extends React.Component {
   render(){
-    let k = ["card square"];
+    let k = ["card"];
     if(this.props.size){
-      k.push(this.props.size);
-    } else {
-      k.push("sm");
+      switch(this.props.size){
+        case "sm":
+        case "md":
+        case "lg":
+          k.push(this.props.size);
+        default:
+          k.push("sm");
+      }
     }
+
+    if(this.props.square){
+      k.push("restrict-width");
+      k.push("restrict-height");
+    } else if(this.props.restrictWidth){
+      k.push("restrict-width");
+    } else if(this.props.restrictHeight){
+      k.push("restrict-height");
+    }
+
     let s = {};
     if(this.props.background){
       s = {

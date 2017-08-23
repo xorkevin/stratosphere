@@ -65,17 +65,11 @@
     &>.title {
       height: $card-sm-size * 2 / 3;
     }
-    &>.body {
-      max-height: $card-sm-size / 3;
-    }
   }
 
   &.md {
     &>.title {
       height: $card-md-size * 2 / 3;
-    }
-    &>.body {
-      max-height: $card-md-size / 3;
     }
   }
 
@@ -83,12 +77,29 @@
     &>.title {
       height: $card-lg-size * 2 / 3;
     }
-    &>.body {
-      max-height: $card-lg-size / 3;
+  }
+
+  &.restrict-height {
+    &.sm {
+      &>.body {
+        max-height: $card-sm-size / 3;
+      }
+    }
+
+    &.md {
+      &>.body {
+        max-height: $card-md-size / 3;
+      }
+    }
+
+    &.lg {
+      &>.body {
+        max-height: $card-lg-size / 3;
+      }
     }
   }
 
-  &.square {
+  &.restrict-width {
     &.sm {
       width: $card-sm-size;
     }
