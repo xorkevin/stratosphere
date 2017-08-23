@@ -12,7 +12,7 @@ nav, .nav {
   font-size       : 0.84rem;
   letter-spacing  : 2px;
   text-transform  : uppercase;
-  box-shadow      : 0px 1px 2px 0px rgba(0,0,0,.24), 0px 1px 4px 0px rgba(0,0,0,.11);
+  box-shadow      : $shadow-box-2;
   z-index         : 64;
   overflow        : hidden;
 

@@ -2,16 +2,16 @@
 $black                 : #000000 !default;
 $white                 : #FFFFFF !default;
 $color-primary         : #224A7F !default;
-$color-accent          : #EFB87A !default;
-$color-secondary       : #37393A !default;
+$color-accent          : #FFB74D !default;
+$color-accent-dark     : #FB8C00 !default;
 $background            : #FAFBFC !default;
-$background-transparent: rgba($white, 0.94) !default;
+$background-transparent: rgba($white, 0.97) !default;
 
-$color-text-dark-1: rgba($black, 0.87) !default; // primary
+$color-text-dark-1  : rgba($black, 0.87) !default; // primary
 $color-text-dark-1-5: rgba($black, 0.75) !default; // primary
-$color-text-dark-2: rgba($black, 0.54) !default; // secondary
-$color-text-dark-3: rgba($black, 0.38) !default; // disabled/hint/icons
-$color-text-dark-4: rgba($black, 0.12) !default; // dividers
+$color-text-dark-2  : rgba($black, 0.54) !default; // secondary
+$color-text-dark-3  : rgba($black, 0.38) !default; // disabled/hint/icons
+$color-text-dark-4  : rgba($black, 0.12) !default; // dividers
 
 $color-text-light-1: rgba($white, 1) !default; // primary
 $color-text-light-2: rgba($white, 0.7) !default; // secondary
@@ -25,4 +25,8 @@ $color-text-light-4: rgba($white, 0.12) !default; // dividers
 // $color-grey-50 : #FAFAFA;
 
 $color-valid  : #61D095 !default;
-$color-invalid: #D3001F !default;
+$color-invalid: #C62828 !default;
+
+$shadow-box : 0 2px 4px 0 $color-text-dark-4, 0 2px 8px 0 $color-text-dark-4;
+$shadow-box-2: 0 1px 2px 0 $color-text-dark-4, 0 1px 4px 0 $color-text-dark-4;
+$shadow-text: 0 1px 16px $color-text-dark-4, 0 1px 8px $color-text-dark-4, 0 1px 4px $color-text-dark-4
