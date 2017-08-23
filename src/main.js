@@ -26,14 +26,14 @@ render(
 
 render(
   <Header
-    images={["/assets/underground.jpg", "/assets/mountain.jpg", "/assets/forest.jpg"]}
+    images={["assets/underground.jpg", "assets/mountain.jpg", "assets/forest.jpg"]}
     text={[<h1>Welcome</h1>, <h1>Bienvenue</h1>, <h1>Benvenuto</h1>]}
     animated/>,
   document.getElementById('head')
 );
 
 render(
-  <Header image="/assets/thames.jpg" fixed size="lg"/>,
+  <Header image="assets/thames.jpg" fixed size="lg"/>,
   document.getElementById('head2')
 );
 
@@ -71,21 +71,21 @@ render(
 
 render(
   <div>
-    <Card size="lg" background="/assets/climb.jpg" title={[
+    <Card size="lg" background="assets/climb.jpg" title={[
         <h3>Vivamus nibh enim</h3>,<button><FaIcon icon="heart"/></button>
       ]} bar={[
         <button>Share</button>
       ]}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla aliquet condimentum. Nunc facilisis orci dui, sit amet dictum massa porta at. Mauris augue nisi, scelerisque ac suscipit sit amet, egestas ut risus. In hac habitasse platea dictumst. Vivamus nibh enim, dignissim quis consequat at, sagittis in magna.
     </Card>
-    <Card size="md" background="/assets/flower.jpg" title={[
+    <Card size="md" background="assets/flower.jpg" title={[
         <h3>Vivamus nibh enim</h3>,<button><FaIcon icon="heart"/></button>
       ]} bar={[
         <button>Share</button>
       ]}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla aliquet condimentum. Nunc facilisis orci dui, sit amet dictum massa porta at. Mauris augue nisi, scelerisque ac suscipit sit amet, egestas ut risus. In hac habitasse platea dictumst. Vivamus nibh enim, dignissim quis consequat at, sagittis in magna.
     </Card>
-    <Card size="sm" background="/assets/underground.jpg" title={[
+    <Card size="sm" background="assets/underground.jpg" title={[
         <h3>Vivamus nibh enim</h3>,<button><FaIcon icon="heart"/></button>
       ]} bar={[
         <button>Share</button>
