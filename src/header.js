@@ -4,6 +4,16 @@ const nextIndex = (current, cap)=>{
   return (current + 1) % cap;
 };
 
+const colorSwitch = (colorName)=>{
+  switch(colorName){
+    case "accent":
+      return "#FFB74D";
+    case "primary":
+      return "#224A7F";
+  }
+  return "";
+};
+
 class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -94,20 +104,32 @@ class Header extends React.Component {
       }
     }
     if(this.props.animated){
+      let s1 = {backgroundImage: "url(" + this.state.imgUrl + ")"};
+      let s2 = {backgroundImage: "url(" + this.state.imgUrl2 + ")"}
+      const y = colorSwitch(this.props.color);
+      if(y !== ""){
+        s1.backgroundColor = y;
+        s2.backgroundColor = y;
+      }
       return <div className={k.join(" ")}>
-        <div className={j.join(" ")} style={{backgroundImage: "url(" + this.state.imgUrl + ")"}}>
+        <div className={j.join(" ")} style={s1}>
           <div className="container padded">
             <h1 className="colossal">{this.state.text}</h1>
           </div>
         </div>
-        <div className={l.join(" ")} style={{backgroundImage: "url(" + this.state.imgUrl2 + ")"}}>
+        <div className={l.join(" ")} style={s2}>
           <div className="container padded">
             <h1 className="colossal">{this.state.text2}</h1>
           </div>
         </div>
       </div>;
     } else {
-      return <header className={k.join(" ")} style={{backgroundImage: "url(" + this.props.image + ")"}}>
+      let s = {backgroundImage: "url(" + this.props.image + ")"};
+      const y = colorSwitch(this.props.color);
+      if(y !== ""){
+        s.backgroundColor = y;
+      }
+      return <header className={k.join(" ")} style={s}>
         <div className="container padded">
           {this.props.children}
         </div>

@@ -25,10 +25,9 @@ render(
 );
 
 render(
-  <Header
-    images={["assets/underground.jpg", "assets/mountain.jpg", "assets/forest.jpg"]}
-    text={["Welcome", "Bienvenue", "Benvenuto"]}
-    animated/>,
+  <Header fixed color="primary" image="assets/underground.jpg">
+    <h1 className="colossal">Welcome</h1>
+  </Header>,
   document.getElementById('head')
 );
 
