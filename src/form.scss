@@ -80,7 +80,7 @@ input, textarea {
     }
 
     & ~ .info {
-      color     : $color-text-dark-2;
+      color     : $color-text-dark-3;
       position  : absolute;
       font-size : 0.75em;
       margin-top: 2px;
@@ -88,11 +88,11 @@ input, textarea {
     }
 
     &:focus ~ .info {
-      color: $color-text-dark-1;
+      color: $color-text-dark-2;
     }
 
     &:not(:placeholder-shown) ~ .info {
-      color: $color-text-dark-1;
+      color: $color-text-dark-2;
     }
 
     & ~ .error {

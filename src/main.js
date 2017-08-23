@@ -9,6 +9,7 @@ import Anchor from 'anchor';
 import Footer from 'footer';
 import Card   from 'card';
 import FaIcon from 'faicon';
+import Input  from 'form';
 
 render(
   <Navbar left={[
@@ -100,4 +101,21 @@ render(
     </Card>
   </div>,
   document.getElementById('isolated-cards')
+);
+
+render(
+  <div>
+    <Input label="Name"/>
+    <Input label="Email" error="not an email"/>
+    <Input label="Phone" valid/>
+    <Input label="Tagline" info="What describes you?"/>
+    <Card size="lg" restrictWidth titleBar title={[
+        <h3>Vivamus nibh enim</h3>
+      ]} bar={[
+        <button>Submit</button>
+      ]}>
+      <Input textarea fullWidth label="Biography" info="Tell us about yourself"/>
+    </Card>
+  </div>,
+  document.getElementById('form')
 );
