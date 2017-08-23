@@ -97,12 +97,12 @@ class Header extends React.Component {
       return <div className={k.join(" ")}>
         <div className={j.join(" ")} style={{backgroundImage: "url(" + this.state.imgUrl + ")"}}>
           <div className="container padded">
-            {this.state.text}
+            <h1 className="colossal">{this.state.text}</h1>
           </div>
         </div>
         <div className={l.join(" ")} style={{backgroundImage: "url(" + this.state.imgUrl2 + ")"}}>
           <div className="container padded">
-            {this.state.text2}
+            <h1 className="colossal">{this.state.text2}</h1>
           </div>
         </div>
       </div>;

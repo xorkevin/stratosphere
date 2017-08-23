@@ -27,7 +27,7 @@ render(
 render(
   <Header
     images={["assets/underground.jpg", "assets/mountain.jpg", "assets/forest.jpg"]}
-    text={[<h1>Welcome</h1>, <h1>Bienvenue</h1>, <h1>Benvenuto</h1>]}
+    text={["Welcome", "Bienvenue", "Benvenuto"]}
     animated/>,
   document.getElementById('head')
 );
