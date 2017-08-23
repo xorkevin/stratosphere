@@ -23,14 +23,21 @@ class Card extends React.Component {
       k.push("restrict-height");
     }
 
+    let titleclass = "title";
+    if(this.props.titleBar){
+      titleclass = "title-bar";
+      k.push("accent");
+    }
+
     let s = {};
     if(this.props.background){
       s = {
         backgroundImage: "url(" + this.props.background + ")",
       };
     }
+
     return <div className={k.join(" ")}>
-      <div className="title" style={s}>
+      <div className={titleclass} style={s}>
         <div className="inner">
           {this.props.title}
         </div>

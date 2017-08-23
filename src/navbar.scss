@@ -15,6 +15,7 @@ nav, .nav {
   box-shadow      : $shadow-box-2;
   z-index         : 64;
   overflow        : hidden;
+  border-top      : 4px solid $color-accent;
 
   &.top {
     background-color: transparent;

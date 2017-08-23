@@ -92,6 +92,13 @@ render(
       ]}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla aliquet condimentum. Nunc facilisis orci dui, sit amet dictum massa porta at. Mauris augue nisi, scelerisque ac suscipit sit amet, egestas ut risus. In hac habitasse platea dictumst. Vivamus nibh enim, dignissim quis consequat at, sagittis in magna.
     </Card>
+    <Card size="md" restrictWidth titleBar title={[
+        <h3>Vivamus nibh enim</h3>,<button><FaIcon icon="heart"/></button>
+      ]} bar={[
+        <button>Share</button>
+      ]}>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla aliquet condimentum. Nunc facilisis orci dui, sit amet dictum massa porta at. Mauris augue nisi, scelerisque ac suscipit sit amet, egestas ut risus. In hac habitasse platea dictumst. Vivamus nibh enim, dignissim quis consequat at, sagittis in magna.
+    </Card>
   </div>,
   document.getElementById('isolated-cards')
 );
