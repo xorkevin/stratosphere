@@ -36,48 +36,49 @@ render(
 render(
   <Container padded id="cards" sectionTitle="Cards anyone?">
     <Grid md={8} sm={12}>
-      <Card size="md" restrictHeight background="assets/underground.jpg" title={[
+      <Card colkey="underground" size="md" restrictHeight background="assets/underground.jpg" title={[
           <h3>Lorem ipsum</h3>,<button><FaIcon icon="heart"/></button>
         ]} bar={[
           <button>View</button>
         ]}>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </Card>
-      <Card size="md" restrictHeight background="assets/mountain.jpg" title={[
+      <Card colkey="mountain" size="md" restrictHeight background="assets/mountain.jpg" title={[
           <h3>Dolor sit amet</h3>,<button><FaIcon icon="heart"/></button>
         ]} bar={[
           <button>View</button>
         ]}>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla aliquet condimentum. Nunc facilisis orci dui, sit amet dictum massa porta at. Mauris augue nisi, scelerisque ac suscipit sit amet, egestas ut risus. In hac habitasse platea dictumst. Vivamus nibh enim, dignissim quis consequat at, sagittis in magna.</p>
       </Card>
-      <Card size="md" restrictHeight background="assets/forest.jpg" title={[
+      <Card colkey="forest" size="md" restrictHeight background="assets/forest.jpg" title={[
           <h3>Consectetur</h3>,<button><FaIcon icon="heart"/></button>
         ]} bar={[
           <button>View</button>
         ]}>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </Card>
-      <Card size="md" restrictHeight background="assets/flower.jpg" title={[
+      <Card colkey="flower" size="md" restrictHeight background="assets/flower.jpg" title={[
           <h3>Adipiscing elit</h3>,<button><FaIcon icon="heart"/></button>
         ]} bar={[
           <button>View</button>
         ]}>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </Card>
-      <Card size="md" restrictHeight background="assets/climb.jpg" title={[
+      <Card colkey="climb" size="md" restrictHeight background="assets/climb.jpg" title={[
           <h3>Integer fringilla</h3>,<button><FaIcon icon="heart"/></button>
         ]} bar={[
           <button>View</button>
         ]}>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </Card>
-      <Card size="md" restrictHeight background="assets/thames.jpg" title={[
+      <Card colkey="thames" size="md" restrictHeight background="assets/thames.jpg" title={[
           <h3>Aliquet</h3>,<button><FaIcon icon="heart"/></button>
         ]} bar={[
           <button>View</button>
         ]}>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </Card>
+      {'String'}
     </Grid>
     <div>
       <Card size="lg" square background="assets/climb.jpg" title={[

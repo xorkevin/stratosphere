@@ -22,7 +22,15 @@ class Grid extends React.Component {
 
     return <div className={k.join(" ")}>
       { React.Children.map(this.props.children, (child)=>{
-        return <Column {...childProps}>{child}</Column>;
+        let key = null;
+        if(React.isValidElement(child)){
+          if(child.props.colkey){
+            key = child.props.colkey;
+          }
+        } else if(typeof child === 'string'){
+          key = child;
+        }
+        return <Column key={key} {...childProps}>{child}</Column>;
       }) }
     </div>;
   }
