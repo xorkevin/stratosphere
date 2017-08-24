@@ -61,6 +61,10 @@ html, body {
     .info {
       font-family: $typography-base-font;
       font-size: 1rem;
+
+      time {
+        font-size: 0.85rem;
+      }
     }
 
     p {
