@@ -14,13 +14,13 @@ import Input  from 'form';
 
 render(
   <Navbar left={[
-    ['Home', ''],
-    ['Cards', 'cards'],
-    ['Typography', 'typography'],
-    ['Form', 'form'],
+    {key: 'home', scroll: true, component: 'Home', target: ''},
+    {key: 'cards', scroll: true, component: 'Cards', target: 'cards'},
+    {key: 'typography', scroll: true, component: 'Typography', target: 'typography'},
+    {key: 'form', scroll: true, component: 'Form', target: 'form'},
   ]} right={[
-    <Anchor href="#">Contact</Anchor>,
-    <Anchor ext href="https://github.com/xorkevin"><FaIcon icon="github"/> xorkevin</Anchor>,
+    {key: 'contact', scroll: false, component: 'Contact', target: '#'},
+    {key: 'xorkevin', scroll: false, component: <span><FaIcon icon="github"/> xorkevin</span>, ext: true, target: 'https://github.com/xorkevin'},
   ]}>
   </Navbar>,
   document.getElementById('nav')

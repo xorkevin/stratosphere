@@ -1,4 +1,5 @@
 import React from 'react';
+import Anchor from 'anchor';
 
 const scrollTime = 384;
 const navHeight = 64;
@@ -48,19 +49,21 @@ class Navbar extends React.Component {
     let k = [];
     if(left){
       for(let i = 0; i < left.length; i++){
-        if(Array.isArray(left[i]) && left[i].length > 1){
-          j.push(<div className="item" onClick={()=>{scrollTo(left[i][1], scrollTime);}}>{left[i][0]}</div>);
+        const l = left[i];
+        if(l.scroll){
+          j.push(<div key={l.key} className="item" onClick={()=>{scrollTo(l.target, scrollTime);}}>{l.component}</div>);
         } else {
-          j.push(<div className="item">{left[i]}</div>);
+          j.push(<div key={l.key} className="item"><Anchor ext={l.ext} href={l.target}>{l.component}</Anchor></div>);
         }
       }
     }
     if(right){
       for(let i = 0; i < right.length; i++){
-        if(Array.isArray(right[i]) && right[i].length > 1){
-          k.push(<div className="item" onClick={()=>{scrollTo(right[i][1], scrollTime);}}>{right[i][0]}</div>);
+        const l = right[i];
+        if(l.scroll){
+          k.push(<div key={l.key} className="item" onClick={()=>{scrollTo(l.target, scrollTime);}}>{l.component}</div>);
         } else {
-          k.push(<div className="item">{right[i]}</div>);
+          k.push(<div key={l.key} className="item"><Anchor ext={l.ext} href={l.target}>{l.component}</Anchor></div>);
         }
       }
     }
