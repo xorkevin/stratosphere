@@ -67,27 +67,6 @@ class Column extends React.Component {
   }
 }
 
-class Container extends React.Component {
-  render(){
-    const k = ["container"];
-    if(this.props.padded){
-      k.push("padded")
-    }
+export { Grid, Column }
 
-    let id = "";
-    if(this.props.id){
-      id = this.props.id;
-    }
-
-    return <div className={k.join(" ")} id={id}>
-      { this.props.sectionTitle && <h1 className="section-header">{this.props.sectionTitle}</h1> }
-      { this.props.children }
-    </div>;
-  }
-}
-
-const Components = { Grid, Column, Container };
-
-export { Grid, Column, Container }
-
-export default Components
+export default Grid

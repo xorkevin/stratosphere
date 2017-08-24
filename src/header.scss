@@ -7,10 +7,6 @@ header, .header, .hero {
   align-content        : center;
   align-items          : center;
 
-  .colossal {
-    font-size: 64px;
-  }
-
   &.fixed {
     background: no-repeat center center / cover fixed;
   }
