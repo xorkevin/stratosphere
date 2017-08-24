@@ -5,6 +5,7 @@ import {render} from 'react-dom';
 
 import Navbar from 'navbar';
 import Header from 'header';
+import {Grid, Column, Container} from 'grid';
 import Anchor from 'anchor';
 import Footer from 'footer';
 import Card   from 'card';
@@ -30,6 +31,86 @@ render(
     <h1 className="colossal">Welcome</h1>
   </Header>,
   document.getElementById('head')
+);
+
+render(
+  <Container padded id="cards" sectionTitle="Cards anyone?">
+    <Grid md={8} sm={12}>
+      <Card size="md" restrictHeight background="assets/underground.jpg" title={[
+          <h3>Lorem ipsum</h3>,<button><FaIcon icon="heart"/></button>
+        ]} bar={[
+          <button>View</button>
+        ]}>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </Card>
+      <Card size="md" restrictHeight background="assets/mountain.jpg" title={[
+          <h3>Dolor sit amet</h3>,<button><FaIcon icon="heart"/></button>
+        ]} bar={[
+          <button>View</button>
+        ]}>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla aliquet condimentum. Nunc facilisis orci dui, sit amet dictum massa porta at. Mauris augue nisi, scelerisque ac suscipit sit amet, egestas ut risus. In hac habitasse platea dictumst. Vivamus nibh enim, dignissim quis consequat at, sagittis in magna.</p>
+      </Card>
+      <Card size="md" restrictHeight background="assets/forest.jpg" title={[
+          <h3>Consectetur</h3>,<button><FaIcon icon="heart"/></button>
+        ]} bar={[
+          <button>View</button>
+        ]}>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </Card>
+      <Card size="md" restrictHeight background="assets/flower.jpg" title={[
+          <h3>Adipiscing elit</h3>,<button><FaIcon icon="heart"/></button>
+        ]} bar={[
+          <button>View</button>
+        ]}>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </Card>
+      <Card size="md" restrictHeight background="assets/climb.jpg" title={[
+          <h3>Integer fringilla</h3>,<button><FaIcon icon="heart"/></button>
+        ]} bar={[
+          <button>View</button>
+        ]}>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </Card>
+      <Card size="md" restrictHeight background="assets/thames.jpg" title={[
+          <h3>Aliquet</h3>,<button><FaIcon icon="heart"/></button>
+        ]} bar={[
+          <button>View</button>
+        ]}>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </Card>
+    </Grid>
+    <div>
+      <Card size="lg" square background="assets/climb.jpg" title={[
+          <h3>Vivamus nibh enim</h3>,<button><FaIcon icon="heart"/></button>
+        ]} bar={[
+          <button>Share</button>
+        ]}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla aliquet condimentum. Nunc facilisis orci dui, sit amet dictum massa porta at. Mauris augue nisi, scelerisque ac suscipit sit amet, egestas ut risus. In hac habitasse platea dictumst. Vivamus nibh enim, dignissim quis consequat at, sagittis in magna.
+      </Card>
+      <Card size="md" square background="assets/flower.jpg" title={[
+          <h3>Vivamus nibh enim</h3>,<button><FaIcon icon="heart"/></button>
+        ]} bar={[
+          <button>Share</button>
+        ]}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla aliquet condimentum. Nunc facilisis orci dui, sit amet dictum massa porta at. Mauris augue nisi, scelerisque ac suscipit sit amet, egestas ut risus. In hac habitasse platea dictumst. Vivamus nibh enim, dignissim quis consequat at, sagittis in magna.
+      </Card>
+      <Card size="sm" square background="assets/underground.jpg" title={[
+          <h3>Vivamus nibh enim</h3>,<button><FaIcon icon="heart"/></button>
+        ]} bar={[
+          <button>Share</button>
+        ]}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla aliquet condimentum. Nunc facilisis orci dui, sit amet dictum massa porta at. Mauris augue nisi, scelerisque ac suscipit sit amet, egestas ut risus. In hac habitasse platea dictumst. Vivamus nibh enim, dignissim quis consequat at, sagittis in magna.
+      </Card>
+      <Card size="md" restrictWidth titleBar title={[
+          <h3>Vivamus nibh enim</h3>,<button><FaIcon icon="heart"/></button>
+        ]} bar={[
+          <button>Share</button>
+        ]}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla aliquet condimentum. Nunc facilisis orci dui, sit amet dictum massa porta at. Mauris augue nisi, scelerisque ac suscipit sit amet, egestas ut risus. In hac habitasse platea dictumst. Vivamus nibh enim, dignissim quis consequat at, sagittis in magna.
+      </Card>
+    </div>
+  </Container>,
+  document.getElementById('grid')
 );
 
 render(
@@ -67,40 +148,6 @@ render(
     </div>
   </Footer>,
   document.getElementById('footer')
-);
-
-render(
-  <div>
-    <Card size="lg" square background="assets/climb.jpg" title={[
-        <h3>Vivamus nibh enim</h3>,<button><FaIcon icon="heart"/></button>
-      ]} bar={[
-        <button>Share</button>
-      ]}>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla aliquet condimentum. Nunc facilisis orci dui, sit amet dictum massa porta at. Mauris augue nisi, scelerisque ac suscipit sit amet, egestas ut risus. In hac habitasse platea dictumst. Vivamus nibh enim, dignissim quis consequat at, sagittis in magna.
-    </Card>
-    <Card size="md" square background="assets/flower.jpg" title={[
-        <h3>Vivamus nibh enim</h3>,<button><FaIcon icon="heart"/></button>
-      ]} bar={[
-        <button>Share</button>
-      ]}>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla aliquet condimentum. Nunc facilisis orci dui, sit amet dictum massa porta at. Mauris augue nisi, scelerisque ac suscipit sit amet, egestas ut risus. In hac habitasse platea dictumst. Vivamus nibh enim, dignissim quis consequat at, sagittis in magna.
-    </Card>
-    <Card size="sm" square background="assets/underground.jpg" title={[
-        <h3>Vivamus nibh enim</h3>,<button><FaIcon icon="heart"/></button>
-      ]} bar={[
-        <button>Share</button>
-      ]}>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla aliquet condimentum. Nunc facilisis orci dui, sit amet dictum massa porta at. Mauris augue nisi, scelerisque ac suscipit sit amet, egestas ut risus. In hac habitasse platea dictumst. Vivamus nibh enim, dignissim quis consequat at, sagittis in magna.
-    </Card>
-    <Card size="md" restrictWidth titleBar title={[
-        <h3>Vivamus nibh enim</h3>,<button><FaIcon icon="heart"/></button>
-      ]} bar={[
-        <button>Share</button>
-      ]}>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla aliquet condimentum. Nunc facilisis orci dui, sit amet dictum massa porta at. Mauris augue nisi, scelerisque ac suscipit sit amet, egestas ut risus. In hac habitasse platea dictumst. Vivamus nibh enim, dignissim quis consequat at, sagittis in magna.
-    </Card>
-  </div>,
-  document.getElementById('isolated-cards')
 );
 
 render(
