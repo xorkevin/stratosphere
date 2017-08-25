@@ -112,7 +112,7 @@ const timeAgo = (date)=>{
   return timeAgoFormatStrings[k][future].format(num);
 };
 
-class Time extends React.Component {
+class Time extends React.PureComponent {
   constructor(props){
     super(props);
     const k = new Date(props.value);

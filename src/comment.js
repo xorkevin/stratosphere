@@ -1,16 +1,17 @@
 import React from 'react';
 import Time from 'time';
 
-class Comment extends React.Component {
+class Comment extends React.PureComponent {
   render(){
+    const {depth, username, score, time, content, children} = this.props;
     return <div className="comment">
       <div className="inner">
         <div className="info">
-          <span className="username"><a>{this.props.username}</a></span>
-          <span className="data score">{this.props.score} points</span>
-          <span className="data time"><Time value={this.props.time}/></span>
+          <span className="username"><a>{username}</a></span>
+          <span className="data score">{score} points</span>
+          <span className="data time"><Time value={time}/></span>
         </div>
-        <div className="content">{this.props.content}</div>
+        <div className="content">{content}</div>
         <div className="options">
           <span><a className="no-color">link</a></span>
           <span><a className="no-color">source</a></span>
@@ -19,17 +20,67 @@ class Comment extends React.Component {
           <span><a className="no-color">report</a></span>
         </div>
       </div>
-      { this.props.children && <div className="children">
-        { this.props.children }
+      { children && <div className="children">
+        { depth > 1 && React.Children.map(children, (child)=>{
+          return React.cloneElement(child, {depth: depth - 1});
+        }) }
+        { depth <= 1 && <span><a className="no-color">continue &gt;</a></span> }
+        { !depth && typeof depth !== 'number' && children }
       </div> }
     </div>;
   }
 }
 
-class CommentSection extends React.Component {
+const sm = 768;
+const md = sm * 1.5;
+const lg = md * 1.5;
+
+const depthXs = 6;
+const depthSm = 8;
+const depthMd = 12;
+const depthLg = 16;
+
+const widthToDepth = (width)=>{
+  if(width > lg){
+    return depthLg;
+  } else if(width > md){
+    return depthMd;
+  } else if(width > sm){
+    return depthSm;
+  }
+  return depthXs;
+};
+
+class CommentSection extends React.PureComponent {
+  constructor(props){
+    super(props);
+    this.state = {
+      depth: widthToDepth(window.innerWidth),
+    };
+  }
+
+  tick(){
+    this.setState((prevState)=>{
+      return Object.assign({}, prevState, {depth: widthToDepth(window.innerWidth)});
+    });
+  }
+
+  componentDidMount(){
+    this.handler = ()=>{this.tick();};
+    window.addEventListener("resize", this.handler);
+  }
+
+  componentWillUnmount(){
+    window.removeEventListener("resize", this.handler);
+  }
+
   render(){
+    const {children} = this.props;
     return <div className="comment-section">
-      { this.props.children }
+      { children && React.Children.map(children, (child)=>{
+        return React.cloneElement(child, {depth: this.state.depth});
+      }) }
+      { !children && <span>No comments</span> }
     </div>;
   }
 }
