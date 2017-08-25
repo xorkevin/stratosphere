@@ -24,7 +24,7 @@ render(
     {key: 'form', scroll: true, component: 'Form', target: 'form'},
     {key: 'buttons', scroll: true, component: 'Buttons', target: 'buttons'},
   ]} right={[
-    {key: 'contact', scroll: false, component: 'Contact', target: '#'},
+    {key: 'contact', scroll: false, component: 'Contact'},
     {key: 'xorkevin', scroll: false, component: <span><FaIcon icon="github"/> xorkevin</span>, ext: true, target: 'https://github.com/xorkevin'},
   ]}>
   </Navbar>,
@@ -172,32 +172,23 @@ render(
     <Button raised fixedWidth text>Raised Text</Button>
   </Section>
   <Footer>
-    <h3>Footer</h3>
-    <h4><Anchor noStyle ext href="https://github.com/xorkevin/stratosphere"><FaIcon border icon="github"/></Anchor></h4>
-    <div className="grid center">
-      <div className="col md-8 sm-12">
-        <h4>About</h4>
+    <Grid center md={6} sm={8}>
+      <div colkey="left" className="text-center">
+       <h4>Stratosphere</h4>
+        A lightweight css library that floats above the clouds
+      </div>
+      <div colkey="center" className="text-center">
         <ul>
-          <li><a href="#">Who we are</a></li>
-          <li><a href="#">Where are we</a></li>
-          <li><a href="#">Contact us</a></li>
+          <li><Anchor noColor ext href="https://github.com/xorkevin/stratosphere"><FaIcon icon="github"/> Github</Anchor></li>
+          <li>Designed for <Anchor noColor ext href="https://github.com/hackform/governor">hackform/governor</Anchor></li>
         </ul>
       </div>
-      <div className="col md-8 sm-12">
-        <h4>Products</h4>
-        <ul>
-          <li><a href="#">Software</a></li>
-          <li><a href="#">Design</a></li>
-          <li><a href="#">Support</a></li>
-        </ul>
+      <div colkey="right" className="text-center">
+        <h5>
+          <FaIcon icon="code"/> with <FaIcon icon="heart-o"/> by <Anchor noColor ext href="https://github.com/xorkevin"><FaIcon icon="github"/> xorkevin</Anchor>
+        </h5>
       </div>
-      <div className="col md-8 sm-12">
-        <ul>
-          <li><FaIcon icon="code"/> with <FaIcon icon="heart-o"/> by Kevin Wang</li>
-          <li><Anchor ext href="https://github.com/xorkevin"><FaIcon icon="github"/> xorkevin</Anchor></li>
-        </ul>
-      </div>
-    </div>
+    </Grid>
   </Footer>
 </main>
   ,document.getElementById('mount')

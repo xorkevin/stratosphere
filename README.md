@@ -1,4 +1,3 @@
 # stratosphere
 
-lightweight css library
-
+A lightweight css library that floats above the clouds

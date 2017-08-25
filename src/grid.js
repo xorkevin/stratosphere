@@ -6,6 +6,12 @@ class Grid extends React.Component {
     if(this.props.strict){
       k.push("strict");
     }
+
+    if(this.props.center){
+      k.push("vertical-center");
+      k.push("horizontal-center");
+    }
+
     if(this.props.verticalCenter){
       k.push("vertical-center");
     }
