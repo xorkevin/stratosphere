@@ -1,5 +1,5 @@
 $button-color-outline: lighten($color-primary-light, 12.5%);
-$button-color-text: lighten(desaturate($color-primary-light, 50%), 12.5%);
+$button-color-background: lighten($color-text-dark-4, 42%);
 
 button {
   padding         : $button-padding $button-padding-h;
@@ -48,12 +48,22 @@ button {
   }
 
   &.text {
-    background-color: $white;
-    color           : $button-color-text;
+    background-color: transparent;
+    color           : $color-text-dark-3;
 
     &:hover {
-      background-color: darken($white, 6.25%);
-      color           : darken($button-color-text, 6.25%);
+      background-color: $button-color-background;
+      color           : $color-text-dark-3;
+    }
+
+    &.raised {
+      background-color: $white;
+      color           : $color-text-dark-3;
+
+      &:hover {
+        background-color: $white;
+        color           : $color-text-dark-3;
+      }
     }
   }
 
