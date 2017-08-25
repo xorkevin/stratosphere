@@ -146,6 +146,9 @@ render(
           content="In hac habitasse platea dictumst">
         </Comment>
       </Comment>
+      <Comment username="xorkevin" score={1} time={Date.now()-180000}
+        content="Vivamus nibh enim, dignissim quis consequat at, sagittis in magna">
+      </Comment>
     </CommentSection>
   </Section>
   <Section id="form" sectionTitle="Form" container padded>
