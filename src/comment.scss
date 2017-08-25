@@ -1,34 +1,36 @@
 .comment {
   margin: 16px 0;
 
-  &>.info {
-    &>* + * {
-      margin-left: 8px;
+  &>.inner {
+    &>.info {
+      &>* + * {
+        margin-left: 8px;
+      }
+
+      .data {
+        font-family: monospace;
+        font-size  : 0.85rem;
+        color      : $color-text-dark-2;
+      }
     }
 
-    .data {
-      font-family: monospace;
-      font-size  : 0.85rem;
-      color      : $color-text-dark-2;
+    &>.content {
+      font-size: 1rem;
+      color    : $color-text-dark-1-5;
     }
-  }
 
-  &>.content {
-    font-size: 1rem;
-    color    : $color-text-dark-1-5;
-  }
+    &>.options {
+      font-size: 0.85rem;
+      color    : $color-text-dark-2;
 
-  &>.options {
-    font-size: 0.85rem;
-    color    : $color-text-dark-2;
-
-    &>* + * {
-      margin-left: 8px;
+      &>* + * {
+        margin-left: 8px;
+      }
     }
   }
 
   &>.children {
-    margin     : 0 0 0 8px;
+    margin     : 0 0 0 12px;
     border-left: 1px solid $color-text-dark-4;
     padding    : 0 0 0 12px;
   }
