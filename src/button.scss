@@ -9,7 +9,7 @@ button {
   text-transform  : uppercase;
   color           : $color-accent;
   text-align      : center;
-  transition      : 0.125s cubic-bezier(0.4, 0, 0.2, 1);
+  transition      : $transition-normal;
   cursor          : pointer;
 
   &:hover {

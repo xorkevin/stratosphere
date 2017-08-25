@@ -24,8 +24,7 @@ input, textarea {
     color        : $color-text-dark-1;
 
     & + label {
-      transition-duration       : .125s;
-      transition-timing-function: cubic-bezier(.4,0,.2,1);
+      transition: $transition-normal;
 
       bottom        : 0;
       color         : $color-text-dark-2;
@@ -42,16 +41,15 @@ input, textarea {
       text-align    : left;
 
       &:after {
-        background-color          : $color-accent;
-        bottom                    : 20px;
-        left                      : calc(50% - 8px);
-        width                     : 16px;
-        height                    : 2px;
-        content                   : '';
-        position                  : absolute;
-        transition-duration       : .125s;
-        transition-timing-function: cubic-bezier(.4,0,.2,1);
-        visibility                : hidden;
+        background-color: $color-accent;
+        bottom          : 20px;
+        left            : calc(50% - 8px);
+        width           : 16px;
+        height          : 2px;
+        content         : '';
+        position        : absolute;
+        transition      : $transition-normal;
+        visibility      : hidden;
       }
     }
 

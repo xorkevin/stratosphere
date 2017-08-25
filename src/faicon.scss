@@ -9,7 +9,7 @@
     border-radius  : 50%;
     height         : 1.75em;
     width          : 1.75em;
-    transition     : 0.0625s cubic-bezier(0.4, 0, 0.2, 1);
+    transition     : $transition-fast;
     text-decoration: none;
 
     &:hover {
