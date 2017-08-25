@@ -21,6 +21,7 @@ render(
     {key: 'cards', scroll: true, component: 'Cards', target: 'cards'},
     {key: 'typography', scroll: true, component: 'Typography', target: 'typography'},
     {key: 'form', scroll: true, component: 'Form', target: 'form'},
+    {key: 'buttons', scroll: true, component: 'Buttons', target: 'buttons'},
   ]} right={[
     {key: 'contact', scroll: false, component: 'Contact', target: '#'},
     {key: 'xorkevin', scroll: false, component: <span><FaIcon icon="github"/> xorkevin</span>, ext: true, target: 'https://github.com/xorkevin'},
@@ -140,6 +141,14 @@ render(
       ]}>
       <Input textarea fullWidth label="Biography" info="Tell us about yourself"/>
     </Card>
+  </Section>
+  <Section id="buttons" sectionTitle="Buttons" container padded>
+    <Button fixedWidth primary>Primary</Button>
+    <Button fixedWidth outline>Outline</Button>
+    <Button fixedWidth text>Text</Button>
+    <Button raised fixedWidth primary>Raised Primary</Button>
+    <Button raised fixedWidth outline>Raised Outline</Button>
+    <Button raised fixedWidth text>Raised Text</Button>
   </Section>
   <Footer>
     <h3>Footer</h3>

@@ -15,6 +15,10 @@ class Button extends React.Component {
       k.push("fixed-width");
     }
 
+    if(this.props.raised){
+      k.push("raised");
+    }
+
     return <button className={k.join(" ")}>{this.props.children}</button>
   }
 }

@@ -1,3 +1,6 @@
+$button-color-outline: lighten($color-primary-light, 12.5%);
+$button-color-text: lighten(desaturate($color-primary-light, 50%), 12.5%);
+
 button {
   padding         : $button-padding $button-padding-h;
   min-width       : $button-min-width;
@@ -35,22 +38,33 @@ button {
   &.outline {
     background-color: $white;
     color           : $color-primary-light;
-    border          : 1px solid lighten($color-primary-light, 12.5%);
+    border          : 1px solid $button-color-outline;
 
     &:hover {
       background-color: $white;
       color           : lighten($color-primary-light, 12.5%);
-      border-color    : lighten($color-primary-light, 25.5%);
+      border-color    : lighten($button-color-outline, 12.5%);
     }
   }
 
   &.text {
     background-color: $white;
-    color           : desaturate($color-primary-light, 50%);
+    color           : $button-color-text;
 
     &:hover {
       background-color: darken($white, 6.25%);
-      color           : darken(desaturate($color-primary-light, 50%), 6.25%);
+      color           : darken($button-color-text, 6.25%);
+    }
+  }
+
+  &.raised {
+    box-shadow: $shadow-button;
+    border: 0;
+
+    &:hover {
+      box-shadow: $shadow-button-raised;
+      transform : translateY(-1px);
+      border: 0;
     }
   }
 
