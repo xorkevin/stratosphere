@@ -134,8 +134,9 @@ render(
     <Card size="lg" restrictWidth titleBar title={[
         <h3>Vivamus nibh enim</h3>
       ]} bar={[
-        <Button outline>Cancel</Button>,
-        <Button primary>Submit</Button>
+        <Button fixedWidth text>Cancel</Button>,
+        <Button fixedWidth outline>Save</Button>,
+        <Button fixedWidth primary>Submit</Button>
       ]}>
       <Input textarea fullWidth label="Biography" info="Tell us about yourself"/>
     </Card>

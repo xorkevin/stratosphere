@@ -25,27 +25,37 @@ button {
   &.primary {
     background-color: $color-primary-light;
     color           : $white;
-    box-shadow      : $shadow-button;
 
     &:hover {
       background-color: lighten($color-primary-light, 12.5%);
       color           : $white;
-      box-shadow      : $shadow-button-raised;
-      transform       : translateY(-1px);
     }
   }
 
   &.outline {
     background-color: $white;
     color           : $color-primary-light;
-    box-shadow      : $shadow-button;
+    border          : 1px solid lighten($color-primary-light, 12.5%);
 
     &:hover {
       background-color: $white;
       color           : lighten($color-primary-light, 12.5%);
-      box-shadow      : $shadow-button-raised;
-      transform       : translateY(-1px);
+      border-color    : lighten($color-primary-light, 25.5%);
     }
+  }
+
+  &.text {
+    background-color: $white;
+    color           : desaturate($color-primary-light, 50%);
+
+    &:hover {
+      background-color: darken($white, 6.25%);
+      color           : darken(desaturate($color-primary-light, 50%), 6.25%);
+    }
+  }
+
+  &.fixed-width {
+    min-width: 96px;
   }
 
   &:focus {
