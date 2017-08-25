@@ -5,11 +5,12 @@ import {render} from 'react-dom';
 
 import Navbar  from 'navbar';
 import Header  from 'header';
+import Footer  from 'footer';
 import Section from 'section';
 import Grid    from 'grid';
 import Article from 'article';
 import Anchor  from 'anchor';
-import Footer  from 'footer';
+import Button  from 'button';
 import Card    from 'card';
 import FaIcon  from 'faicon';
 import Input   from 'form';
@@ -133,7 +134,8 @@ render(
     <Card size="lg" restrictWidth titleBar title={[
         <h3>Vivamus nibh enim</h3>
       ]} bar={[
-        <button>Submit</button>
+        <Button outline>Cancel</Button>,
+        <Button primary>Submit</Button>
       ]}>
       <Input textarea fullWidth label="Biography" info="Tell us about yourself"/>
     </Card>

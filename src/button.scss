@@ -22,7 +22,37 @@ button {
     color: $white;
   }
 
+  &.primary {
+    background-color: $color-primary-light;
+    color           : $white;
+    box-shadow      : $shadow-button;
+
+    &:hover {
+      background-color: lighten($color-primary-light, 12.5%);
+      color           : $white;
+      box-shadow      : $shadow-button-raised;
+      transform       : translateY(-1px);
+    }
+  }
+
+  &.outline {
+    background-color: $white;
+    color           : $color-primary-light;
+    box-shadow      : $shadow-button;
+
+    &:hover {
+      background-color: $white;
+      color           : lighten($color-primary-light, 12.5%);
+      box-shadow      : $shadow-button-raised;
+      transform       : translateY(-1px);
+    }
+  }
+
   &:focus {
     outline: none;
+  }
+
+  & + button {
+    margin-left: 8px;
   }
 }
