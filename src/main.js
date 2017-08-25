@@ -14,6 +14,7 @@ import Button  from 'button';
 import Card    from 'card';
 import FaIcon  from 'faicon';
 import Input   from 'form';
+import {Comment, CommentSection} from 'comment';
 
 render(
   <Navbar left={[
@@ -126,6 +127,23 @@ render(
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla aliquet condimentum. Nunc facilisis orci dui, sit amet dictum massa porta at. Mauris augue nisi, scelerisque ac suscipit sit amet, egestas ut risus. In hac habitasse platea dictumst. Vivamus nibh enim, dignissim quis consequat at, sagittis in magna. Aliquam accumsan, nisl vel sollicitudin fringilla, libero neque vehicula mauris, eu laoreet nunc ligula convallis nulla. Aliquam felis elit, fermentum ac felis sagittis, porttitor placerat odio. Ut consectetur est lectus, sed maximus libero malesuada ut. Proin aliquet, sapien et pretium feugiat, dui diam posuere diam, ut tempor elit purus quis metus.</p>
       <p>Nulla facilisi. Phasellus blandit interdum est, in pellentesque nunc fermentum et. Proin nibh risus, sollicitudin ac urna sed, aliquet hendrerit massa. Pellentesque vehicula fringilla purus, sit amet bibendum turpis malesuada in. Aliquam nisl enim, elementum id dapibus at, suscipit non arcu. Suspendisse sodales massa vitae dolor vestibulum, lacinia congue enim hendrerit. Curabitur dapibus, arcu a pulvinar pulvinar, lectus elit eleifend dolor, id tincidunt nunc dolor eu orci. Sed neque massa, cursus et enim quis, gravida fermentum est. Nam non justo accumsan arcu volutpat ullamcorper sit amet nec mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer a sagittis nibh, sit amet posuere sapien. Aliquam erat volutpat. Phasellus vitae cursus turpis, posuere viverra diam. Fusce mollis consectetur ligula.</p>
     </Article>
+    <CommentSection>
+      <Comment username="xorkevin" score={256} time="2017-02-10T10:34:08Z" 
+        content="Lorem ipsum dolor sit amet">
+        <Comment username="xorkevin" score={32} time="2017-02-10T11:58:07Z" 
+          content="Consectetur adipiscing elit">
+          <Comment username="xorkevin" score={16} time="2017-02-11T00:15:38Z" 
+            content="Integer fringilla aliquet condimentum">
+          </Comment>
+        </Comment>
+        <Comment username="xorkevin" score={128} time="2017-02-10T10:42:03Z" 
+          content="Nunc facilisis orci dui, sit amet dictum massa porta at">
+        </Comment>
+      </Comment>
+      <Comment username="xorkevin" score={64} time="2017-02-10T11:27:42Z" 
+        content="Mauris augue nisi, scelerisque ac suscipit sit amet, egestas ut risus">
+      </Comment>
+    </CommentSection>
   </Section>
   <Section id="form" sectionTitle="Form" container padded>
     <Input label="Name"/>
@@ -152,7 +170,7 @@ render(
   </Section>
   <Footer>
     <h3>Footer</h3>
-    <h4><Anchor ext href="https://github.com/xorkevin/stratosphere"><FaIcon border icon="github"/></Anchor></h4>
+    <h4><Anchor noStyle ext href="https://github.com/xorkevin/stratosphere"><FaIcon border icon="github"/></Anchor></h4>
     <div className="grid center">
       <div className="col md-8 sm-12">
         <h4>About</h4>

@@ -78,6 +78,20 @@ html, body {
 
     &:hover {
       text-decoration: underline;
+      cursor         : pointer;
+    }
+
+    &.no-style {
+      color: inherit;
+      text-decoration: inherit;
+
+      &:hover {
+        text-decoration: inherit;
+      }
+    }
+
+    &.no-color {
+      color: inherit;
     }
   }
 

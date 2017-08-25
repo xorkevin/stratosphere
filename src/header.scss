@@ -17,14 +17,14 @@ header, .header, .hero {
     position: relative;
     z-index: 32;
 
-    .inner-static {
+    &>.inner-static {
       position: relative;
       z-index: 32;
       -webkit-transform-origin: left center;
       transform-origin: left center;
     }
 
-    .inner {
+    &>.inner {
       position: absolute;
       width: 100%;
       top: 0;
@@ -34,19 +34,19 @@ header, .header, .hero {
     }
 
     &.animate {
-      .inner-static {
+      &>.inner-static {
         animation: head-inner-static cubic-bezier(0.4, 0, 0.2, 1) 2s;
         animation-iteration-count: 1;
       }
 
-      .inner {
+      &>.inner {
         animation: head-inner cubic-bezier(0.4, 0, 0.2, 1) 2s;
         animation-iteration-count: 1;
       }
     }
 
     &.fixed {
-      .inner-static, .inner {
+      &>.inner-static, &>.inner {
         background: no-repeat center center / cover fixed;
       }
     }

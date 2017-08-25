@@ -53,7 +53,7 @@ class Navbar extends React.Component {
         if(l.scroll){
           j.push(<div key={l.key} className="item" onClick={()=>{scrollTo(l.target, scrollTime);}}>{l.component}</div>);
         } else {
-          j.push(<div key={l.key} className="item"><Anchor ext={l.ext} href={l.target}>{l.component}</Anchor></div>);
+          j.push(<div key={l.key} className="item"><Anchor noStyle ext={l.ext} href={l.target}>{l.component}</Anchor></div>);
         }
       }
     }
@@ -63,7 +63,7 @@ class Navbar extends React.Component {
         if(l.scroll){
           k.push(<div key={l.key} className="item" onClick={()=>{scrollTo(l.target, scrollTime);}}>{l.component}</div>);
         } else {
-          k.push(<div key={l.key} className="item"><Anchor ext={l.ext} href={l.target}>{l.component}</Anchor></div>);
+          k.push(<div key={l.key} className="item"><Anchor noStyle ext={l.ext} href={l.target}>{l.component}</Anchor></div>);
         }
       }
     }
