@@ -66,7 +66,16 @@ class CommentSection extends React.PureComponent {
   }
 
   componentDidMount(){
-    this.handler = ()=>{this.tick();};
+    this.running = false;
+    this.handler = ()=>{
+      if(!this.running){
+        this.running = true;
+        window.requestAnimationFrame(()=>{
+          this.tick();
+          this.running = false;
+        });
+      }
+    };
     window.addEventListener("resize", this.handler);
   }
 
