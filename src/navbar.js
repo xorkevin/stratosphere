@@ -42,7 +42,7 @@ const scrollTo = (element, duration)=>{
   });
 };
 
-class Navbar extends React.Component {
+class Navbar extends React.PureComponent {
   render(){
     const {left, right} = this.props;
     let j = [];

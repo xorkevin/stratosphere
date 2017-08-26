@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Input extends React.Component {
+class Input extends React.PureComponent {
   render(){
     let k = ["input"];
     if(this.props.valid){

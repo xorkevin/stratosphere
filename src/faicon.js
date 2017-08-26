@@ -1,6 +1,6 @@
 import React from 'react';
 
-class FaIcon extends React.Component {
+class FaIcon extends React.PureComponent {
   render(){
     if(this.props.border){
       return <span className="faicon border">

@@ -14,7 +14,7 @@ const colorSwitch = (colorName)=>{
   return "";
 };
 
-class Header extends React.Component {
+class Header extends React.PureComponent {
   constructor(props) {
     super(props);
     if(props.animated){

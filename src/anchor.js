@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Anchor extends React.Component {
+class Anchor extends React.PureComponent {
   render(){
     let k = {};
     let j = [];

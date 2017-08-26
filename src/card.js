@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Card extends React.Component {
+class Card extends React.PureComponent {
   render(){
     let k = ["card"];
     if(this.props.size){
