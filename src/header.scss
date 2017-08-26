@@ -2,6 +2,7 @@ header, .header, .hero {
   background           : no-repeat center center / cover;
   background-blend-mode: luminosity;
   color                : $color-text-light-1;
+  text-shadow          : $shadow-text;
   display              : flex;
   justify-content      : space-between;
   align-content        : center;

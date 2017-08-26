@@ -1,10 +1,17 @@
 import React from 'react';
+import Container from 'container';
 
 const nextIndex = (current, cap)=>{
   return (current + 1) % cap;
 };
 
 const colorSwitch = (colorName)=>{
+  if(!colorName){
+    return "";
+  }
+  if(colorName.length == 7 && colorName[0] == '#'){
+    return colorName;
+  }
   switch(colorName){
     case "accent":
       return "#FFB74D";
@@ -113,14 +120,14 @@ class Header extends React.PureComponent {
       }
       return <div className={k.join(" ")}>
         <div className={j.join(" ")} style={s1}>
-          <div className="container padded">
+          <Container padded>
             <h1 className="colossal">{this.state.text}</h1>
-          </div>
+          </Container>
         </div>
         <div className={l.join(" ")} style={s2}>
-          <div className="container padded">
+          <Container padded>
             <h1 className="colossal">{this.state.text2}</h1>
-          </div>
+          </Container>
         </div>
       </div>;
     } else {
@@ -130,9 +137,9 @@ class Header extends React.PureComponent {
         s.backgroundColor = y;
       }
       return <header className={k.join(" ")} style={s}>
-        <div className="container padded">
+        <Container padded>
           {this.props.children}
-        </div>
+        </Container>
       </header>;
     }
   }

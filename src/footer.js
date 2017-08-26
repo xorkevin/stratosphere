@@ -1,11 +1,12 @@
 import React from 'react';
+import Container from 'container';
 
 class Footer extends React.PureComponent {
   render(){
     return <footer>
-      <div className="container padded">
+      <Container padded>
         {this.props.children}
-      </div>
+      </Container>
     </footer>;
   }
 }

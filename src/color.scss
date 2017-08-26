@@ -3,9 +3,9 @@ $black                 : #000000 !default;
 $white                 : #FFFFFF !default;
 $color-primary         : #224A7F !default;
 $color-primary-light   : lighten($color-primary, 12.5%) !default;
+$color-primary-white   : #F5F9FD !default;
 $color-accent          : #FFB74D !default;
-$background            : #FCFCFD !default;
-$background-dark       : #E0E0F0 !default;
+$background            : #FCFCFC !default;
 $background-transparent: rgba($white, 0.97) !default;
 
 $color-text-dark-1  : rgba($black, 0.87) !default; // primary
@@ -32,4 +32,4 @@ $shadow-box : 0 2px 4px 0 $color-text-dark-4, 0 2px 8px 0 $color-text-dark-4;
 $shadow-box-2: 0 1px 2px 0 $color-text-dark-4, 0 1px 4px 0 $color-text-dark-4;
 $shadow-button: 0 2px 4px 0 $color-text-dark-4, 0 2px 8px 0 $color-text-dark-4;
 $shadow-button-raised: 0 4px 8px 0 lighten($color-text-dark-4, 12.5%), 0 4px 16px 0 lighten($color-text-dark-4, 12.5%);
-$shadow-text: 0 1px 16px $color-text-dark-4, 0 1px 8px $color-text-dark-4, 0 1px 4px $color-text-dark-4;
+$shadow-text: 0 2px 16px $color-text-dark-4, 0 2px 8px $color-text-dark-4, 0 2px 4px $color-text-dark-4;

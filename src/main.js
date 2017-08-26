@@ -33,8 +33,9 @@ render(
 
 render(
 <main>
-  <Header fixed color="primary" image="assets/underground.jpg">
-    <h1 className="colossal">Welcome</h1>
+  <Header fixed color="#F1F5FD" image="assets/mountain.jpg">
+    <h1 className="colossal">Stratosphere</h1>
+    <h4>A lightweight css library that floats above the clouds</h4>
   </Header>
   <Section id="cards" sectionTitle="Cards anyone?" container padded>
     <Grid md={8} sm={12}>

@@ -11,14 +11,14 @@ class Section extends React.Component {
     if(this.props.container){
       return <section id={id}>
         <Container padded={this.props.padded}>
-          { this.props.sectionTitle && <h1 className="section-header">{this.props.sectionTitle}</h1> }
+          { this.props.sectionTitle && <h3 className="section-header">{this.props.sectionTitle}</h3> }
           { this.props.children }
         </Container>
       </section>;
     }
 
     return <section id={id}>
-      { this.props.sectionTitle && <h1 className="section-header">{this.props.sectionTitle}</h1> }
+      { this.props.sectionTitle && <h3 className="section-header">{this.props.sectionTitle}</h3> }
       { this.props.children }
     </section>;
   }

@@ -1,4 +1,5 @@
 import React from 'react';
+import Container from 'container';
 import Anchor from 'anchor';
 
 const scrollTime = 384;
@@ -69,7 +70,7 @@ class Navbar extends React.PureComponent {
     }
     return <nav>
       <div className="nav-container">
-        <div className="container padded">
+        <Container padded>
           <div className="element">
             {j}
           </div>
@@ -79,7 +80,7 @@ class Navbar extends React.PureComponent {
           <div className="element">
             {k}
           </div>
-        </div>
+        </Container>
       </div>
     </nav>;
   }
