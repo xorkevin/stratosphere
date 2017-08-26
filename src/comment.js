@@ -63,7 +63,9 @@ class Comment extends React.PureComponent {
 const sm = 768;
 const md = sm * 1.5;
 const lg = md * 1.5;
+const xs = 768 / 2;
 
+const depthXxs = 4;
 const depthXs = 6;
 const depthSm = 8;
 const depthMd = 12;
@@ -76,8 +78,10 @@ const widthToDepth = (width)=>{
     return depthMd;
   } else if(width > sm){
     return depthSm;
+  } else if(width > xs){
+    return depthXs;
   }
-  return depthXs;
+  return depthXxs;
 };
 
 class CommentSection extends React.PureComponent {

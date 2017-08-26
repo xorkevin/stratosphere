@@ -183,15 +183,15 @@ render(
                       content="Mauris augue nisi, scelerisque ac suscipit sit amet, egestas ut risus">
                       <Comment username="xorkevin" score={16} time={Date.now()}
                         content="Mauris augue nisi, scelerisque ac suscipit sit amet, egestas ut risus">
+                        <Comment username="xorkevin" score={16} time={Date.now()}
+                          content="Mauris augue nisi, scelerisque ac suscipit sit amet, egestas ut risus">
+                        </Comment>
                       </Comment>
                     </Comment>
                   </Comment>
                 </Comment>
               </Comment>
             </Comment>
-          </Comment>
-          <Comment username="xorkevin" score={16} time={Date.now()}
-            content="Mauris augue nisi, scelerisque ac suscipit sit amet, egestas ut risus">
           </Comment>
         </Comment>
       </Comment>
