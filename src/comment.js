@@ -2,11 +2,41 @@ import React from 'react';
 import Time from 'time';
 
 class Comment extends React.PureComponent {
+  constructor(props){
+    super(props);
+    this.state = {hidden: props.hidden || false};
+  }
+
+  hide(){
+    this.setState((prevState)=>{
+      return Object.assign({}, prevState, {hidden: true});
+    });
+  }
+
+  show(){
+    this.setState((prevState)=>{
+      return Object.assign({}, prevState, {hidden: false});
+    });
+  }
+
+  toggleHidden(){
+    this.setState((prevState)=>{
+      return Object.assign({}, prevState, {hidden: !prevState.hidden});
+    });
+  }
+
   render(){
     const {depth, username, score, time, content, children} = this.props;
-    return <div className="comment">
+    const k = ["comment"];
+    if(this.state.hidden){
+      k.push("hidden");
+    }
+    return <div className={k.join(" ")}>
       <div className="inner">
         <div className="info">
+          <span className="data hide"><a className="no-color" onClick={()=>{
+            this.toggleHidden();
+          }}>[{this.state.hidden && "+"}{!this.state.hidden && "-"}]</a></span>
           <span className="username"><a>{username}</a></span>
           <span className="data score">{score} points</span>
           <span className="data time"><Time value={time}/></span>
@@ -16,11 +46,10 @@ class Comment extends React.PureComponent {
           <span><a className="no-color">link</a></span>
           <span><a className="no-color">source</a></span>
           <span><a className="no-color">reply</a></span>
-          <span><a className="no-color">hide</a></span>
           <span><a className="no-color">report</a></span>
         </div>
       </div>
-      { children && <div className="children">
+      { !this.state.hidden && children && <div className="children">
         { depth > 1 && React.Children.map(children, (child)=>{
           return React.cloneElement(child, {depth: depth - 1});
         }) }

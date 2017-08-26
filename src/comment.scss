@@ -34,6 +34,18 @@
     border-left: 1px solid $color-text-dark-4;
     padding    : 0 0 0 12px;
   }
+
+  &.hidden {
+    &>.inner {
+      &>:not(.info) {
+        display: none;
+      }
+    }
+
+    &>:not(.inner) {
+      display: none;
+    }
+  }
 }
 
 .comment-section {

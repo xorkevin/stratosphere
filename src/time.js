@@ -52,6 +52,7 @@ const timeAgoFormatStrings = [
 /*1*/  ['{0} years ago',   'in {0} years'],
 ];
 
+const sec15 = 15;
 const min1 = 60;
 const min2 = 120;
 const hour1 = 3600;
@@ -75,8 +76,10 @@ const timeAgo = (date)=>{
   let k = 0;
   let num = diff;
 
-  if(diff < min1){
+  if(diff < sec15){
     k = 0;
+  } else if(diff < min1){
+    k = 1;
   } else if(diff < min2){
     k = 2;
     num = Math.floor(num / min1);
